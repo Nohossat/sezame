@@ -1,0 +1,4 @@
+pghost = "localhost"
+pgdatabase = "sezame"
+pguser = "XXXX"
+pgpwd = "XXXX"

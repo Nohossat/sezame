@@ -6,3 +6,5 @@ songs
 .ipynb_checkpoints
 web-api-auth-exemples
 research
+node_modules
+data_wrangling/config.py
