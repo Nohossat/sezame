@@ -5,11 +5,52 @@ We get the Spotify Top 50 songs main info. We previously got the songs info with
 import json
 from pymongo import MongoClient
 import config
+import requests
+import os
 
+def fetch_data(url):
+    """
+    Fetch data from Spotify API
 
-def keep_relevant_spotify_info(input_file, output_file):
-    with open(input_file, "r") as f:
-        data = json.load(f)
+    Parameters
+    ==============
+    url : endpoint
+
+    Output
+    ==============
+    JSON response
+    """
+
+    headers = {'Authorization': f'Bearer {config.spotify_auth}'}
+    resp = requests.get(url, headers=headers)
+    if resp.status_code != 200:
+        raise Exception('erreur: {}'.format(resp.status_code))
+    else:
+        result = resp.json()
+    
+    return result
+
+def get_playlist_info(playlist_id, genre, filename=None):
+    """
+    Make an API call to get the Spotify Playlist Info
+    """
+    result = fetch_data(url)
+    keep_relevant_spotify_info(filename, data=result, genre=genre)
+
+def keep_relevant_spotify_info(output_file=None, input_file=None, data=None, genre=None, save_mongo=True):
+    """
+    From Spotify API Playlist Response, keep the relevant info
+
+    Parameters:
+    output_file : JSON file to output the result
+    input_file : Load data from an external JSON file
+    data : JSON information about the playlist
+    save_mongo : flag to keep the relevant directly to database
+    """
+
+    if input_file is not None:
+        with open(input_file, "r") as f:
+            data = json.load(f)
 
     tracks = data["tracks"]["items"]
 
@@ -21,22 +62,102 @@ def keep_relevant_spotify_info(input_file, output_file):
         info["artists"] = [artist["name"] for artist in track["track"]["artists"]]
         info["duration"] = track["track"]["duration_ms"]
         info["explicit"] = track["track"]["explicit"]
-        info["image"] = track["track"]["album"]["images"][0]["url"]
+        try:
+            info["image"] = track["track"]["album"]["images"][0]["url"]
+        except :
+            info["image"] = "N/A"
+
         info["spotify_id"] = track["track"]["id"]
         info["preview"] = track["track"]["preview_url"]
+        info["genre"] = genre
         tracks_info.append(info)
 
-    with open(output_file, "w") as f:
-        json.dump(tracks_info, f, indent=2)
+    if save_mongo:
+        # save data to database
+        uri_local = f"mongodb://{config.mongo_local_user}:{config.mongo_local_pwd}@{config.mongo_localhost}:{config.mongo_local_port}/?authSource=admin&readPreference=primary&ssl=false"
+        
+        client = MongoClient(uri_local)
+        db = client.sezame
+        try:
+            db.songs.insert_many(tracks_info, ordered=False)
+        except Exception as e:
+            print(e)
+    else :
+        with open(output_file, "w") as f:
+            json.dump(tracks_info, f, indent=2)
 
-def get_tracks_id(playlist_id):
+def get_audio_features(track_id=None):
     """
-    Get Spotify tracks id from Spotify Playlist Id
+    We will use the spotify API to get the audio features for all the songs in the database or for a given track_id
+
+    Parameters:
+    ================
+    track_id : Spotify ID for a given track
+
+    Output:
+    ===============
+    audio features saved in a mongoDB database
     """
-    pass
 
+    if track_id is None:
+        # connect to MongoDB
+        uri_local = f"mongodb://{config.mongo_local_user}:{config.mongo_local_pwd}@{config.mongo_localhost}:{config.mongo_local_port}/?authSource=admin&readPreference=primary&ssl=false"
+        client = MongoClient(uri_local)
+        db = client.sezame
 
-def get_audio_features(track_id):
-    
+        # get Spotify Tracks ids
+        spotify_ids = db.songs.find({}, {"spotify_id" : 1, "_id" : 0})
+        all_ids = [item["spotify_id"] for item in spotify_ids]
+        limit = len(all_ids)
+        
+        # the url only accept 100 ids at a time, so we will use batch ids
+        for i in range(0, 1370, 100):
+            if i + 100 < limit:
+                batch = ','.join(all_ids[i:i+100])
+            else:
+                batch = ','.join(all_ids[i:limit])
+
+            url = f"https://api.spotify.com/v1/audio-features/?ids={batch}"
+            
+            # get audio features
+            result = fetch_data(url)
+
+            # keep relevant info 
+            for audio_feat in result["audio_features"]:
+                save_audio_features(audio_feat, db.songs)
+    else:
+        # get audio features and save to database
+        url = "https://api.spotify.com/v1/audio-features/{track_id}"
+        result = fetch_data(url)
+        save_audio_features(result, db.songs)
+
+def save_audio_features(result, collection):
+    result_id = result.pop("id")
+    result.pop("type")
+    result.pop("uri")
+    result.pop("track_href")
+    result.pop("analysis_url")
+
+    # save to database
+    try:
+        collection.update_one({"spotify_id" : result_id}, { "$set" : result })
+    except Exception as e:
+        print(e)
+
+def get_songs_from_playlists():
+    """
+    Fetch a list of Spotify playlists Id and get the songs relative information
+    """
+    current_dir = os.path.dirname(os.getcwd())
+    count = 1
+
+    with open(os.path.join(current_dir, "data/playlist_ids.json"), "r") as fp:
+        playlists = json.load(fp)
+
+        for playlist in playlists:
+            count = count + 1
+            print(count)
+            get_playlist_info(playlist_id=playlist["id"], genre=playlist["genre"])
+
 if __name__ == "__main__":
-    keep_relevant_spotify_info("../data/spotify_playlist.json", "../data/spotify_playist_info.json")
+    get_audio_features()

@@ -21,7 +21,7 @@ sys.path.append(data_wrangling_path)
 
 import data_wrangling.config as config
 
-def generate_fingerprints(samples, sr=44100, min_dist=5, fan_value=15, n_fft=4096):
+def generate_fingerprints(samples, sr=44100, min_dist=3, fan_value=15, n_fft=4096):
    # transform data from time-domain to frequency domain
     signal = np.abs(librosa.stft(samples, n_fft=n_fft))
     
@@ -71,6 +71,14 @@ def fingerprint_song(file, sr=44100):
 def match_song(fingerprints):
     """
     Match sample fingerprints with the ones in the database => get the most similar song id
+
+    Parameters
+    ==============
+    fingerprints: the fingerprints of the sample song
+
+    Output
+    ==============
+    The most similar song with the confidence level
     """
 
     uri_local = f"mongodb://{config.mongo_local_user}:{config.mongo_local_pwd}@{config.mongo_localhost}:{config.mongo_local_port}/?authSource=admin&readPreference=primary&ssl=false"
@@ -87,20 +95,37 @@ def match_song(fingerprints):
 
         if result is not None:
             for element in result:
-                found_hashes.append([fingerprint[0], fingerprint[1], element["song_id"], element["offset"], element["_id"]])
+                found_hashes.append([fingerprint[0], fingerprint[1] - element["offset"], element["song_id"]])
 
 
-    found_hashes = pd.DataFrame(found_hashes, columns=["hash", "offset_sample", "song_id", "offset_db", "db_id"])
-    found_hashes.to_csv("found.csv")
+    found_hashes = pd.DataFrame(found_hashes, columns=["hash", "offset_difference", "song_id"])
     total_results = found_hashes.shape[0]
-    print(total_results)
+
+    # we will take 2 parameters into account:
+    # - the variance in the offset difference
+    # - the number of fingerprints
+    
+    # first song with less variance
+    found_hashes_var = found_hashes.groupby(by=["song_id"]).var()
+    found_hashes_var = found_hashes_var.sort_values(by='offset_difference', ascending=False)
+    first_choice_var = found_hashes_var.index.values[0]
+    found_hashes_var.to_csv("found_var.csv")
+
     sorted_hashes = found_hashes["song_id"].value_counts()
     sorted_hashes.to_csv("sorted_found.csv")
-    song_matched_id = sorted_hashes.index.values[0]
 
-    song = db.songs.find_one({"_id" : ObjectId(song_matched_id)}, {"name" : 1, "artists" : 1, "_id" : 0})
-    confidence = int(sorted_hashes.values[0]) / total_results
+    # we can compute the confidence level of the most similar song
+    confidence = int(sorted_hashes[first_choice_var]) / total_results
+    
+    if confidence < 0.35:
+        # we take a 20% confidence threshold in order to consider the song as a valid answer
+        song_guessed = db.songs.find_one({"_id" : ObjectId(first_choice_var)}, {"name" : 1, "artists" : 1, "_id" : 0})
+        print(song_guessed)
+        return "No result", confidence
+
+    song = db.songs.find_one({"_id" : ObjectId(first_choice_var)}, {"name" : 1, "artists" : 1, "_id" : 0})
+    
+
     print(f"result : {song}, confidence : {confidence}")
-
     return song, confidence
 
