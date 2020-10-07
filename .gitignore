@@ -8,3 +8,7 @@ web-api-auth-exemples
 research
 node_modules
 data_wrangling/config.py
+found_var.csv
+found.csv
+sample_fingerprints.csv
+sorted_found.csv
