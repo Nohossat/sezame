@@ -1,0 +1,110 @@
+[
+    {
+        "name": "African Heat",
+        "id": "37i9dQZF1DWYkaDif7Ztbp",
+        "genre" : "afro"
+    },
+    {
+        "name": "Top Pop",
+        "id": "37i9dQZF1DX92MLsP3K1fI",
+        "genre" : "pop"
+    },
+    {
+        "name": "Hits Urbanos",
+        "id": "37i9dQZF1DWVskFRGurTfg",
+        "genre" : "latin-urbano"
+    },
+    {
+        "name": "Indielandia",
+        "id": "37i9dQZF1DWZ0Zsena4JFh",
+        "genre" : "indie"
+    },
+    {
+        "name": "Adrenaline Workout",
+        "id": "37i9dQZF1DXe6bgV3TmZOL",
+        "genre" : "metal"
+    },
+    {
+        "name": "Rock Classics",
+        "id": "37i9dQZF1DWXRqgorJj26U",
+        "genre" : "rock"
+    },
+    {
+        "name": "DOPE.",
+        "id": "37i9dQZF1DWSrdTgewhgZq",
+        "genre" : "hip-hop"
+    },
+    {
+        "name": "Housewerk",
+        "id": "37i9dQZF1DXa8NOEUWPn9W",
+        "genre" : "house"
+    },
+    {
+        "name": "Techno Bunker",
+        "id": "37i9dQZF1DX6J5NfMJS675",
+        "genre" : "electro"
+    },
+    {
+        "name": "Techno Bunker",
+        "id": "37i9dQZF1DX6J5NfMJS675",
+        "genre" : "electro"
+    },
+    {
+        "name": "K-Pop Daebak",
+        "id": "37i9dQZF1DX9tPFwDMOaN1",
+        "genre" : "k-pop"
+    },
+    {
+        "name": "50 Great Female Voices",
+        "id": "37i9dQZF1DX9loJQLuEvap",
+        "genre" : "soul"
+    },
+    {
+        "name": "Jazz Classics",
+        "id": "37i9dQZF1DXbITWG1ZJKYt",
+        "genre" : "jazz"
+    },
+    {
+        "name": "Classical Essentials",
+        "id": "37i9dQZF1DWWEJlAGA9gs0",
+        "genre" : "classical"
+    },
+    {
+        "name": "Dancehall Throwback",
+        "id": "37i9dQZF1DWWDLvD3P5wOG",
+        "genre" : "dancehall"
+    },
+    {
+        "name": "Dancehall Throwback",
+        "id": "37i9dQZF1DWWDLvD3P5wOG",
+        "genre" : "dancehall"
+    },
+    {
+        "name": "Reggae Classics",
+        "id": "37i9dQZF1DXbSbnqxMTGx9",
+        "genre" : "reggae"
+    },
+    {
+        "name": "Salsa Nation",
+        "id": "37i9dQZF1DX4qKWGR9z0LI",
+        "genre" : "salsa"
+    },
+    {
+        "name": "Chilled RnB",
+        "id": "37i9dQZF1DX2UgsUIg75Vg",
+        "genre" : "rnb"
+    },
+    {
+        "name": "All Trap Music",
+        "id": "1uLiGMoBblLK2L19HUDhJv",
+        "genre" : "trap"
+    },
+    {
+        "name": "Downtempo Beats",
+        "id": "37i9dQZF1DWWQp0YMTvpD3",
+        "genre" : "downtempo"
+    }
+]
+
+
+

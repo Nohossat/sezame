@@ -1,6 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
 body {
     background-color: #efefef;
     margin:0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+}
+
+h1 {
+    font-size: 5em;
+    margin-bottom: 0em;
+}
+
+p {
+    font-size: 1.1em;
+}
+
+a {
+    color : #884467;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 .main-container {
@@ -14,11 +36,13 @@ body {
 }
 
 .cover {
-    background-image: url("../public/images/james_blake_cover.jpg");
+    background-color: #000;
+    background-size: auto;
     height: 100vh;
     width: 100%;
-    object-fit: cover;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    background-repeat: no-repeat;
+    background-position: right;
 }

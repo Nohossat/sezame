@@ -8,4 +8,11 @@
     right: 0;
     margin: auto;
     width: 90%;
+    z-index: 3;
+}
+
+.search_icon {
+    width: 20px;
+    cursor: pointer;
+    color : #884467;
 }

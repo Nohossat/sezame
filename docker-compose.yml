@@ -1,0 +1,23 @@
+version : '3.7'
+services:
+    web:
+        build:
+            context: './sezame_app'
+            dockerfile: './Dockerfile'
+        image : 'sezame_app'
+        ports:
+            - '0.0.0.0:3000:3000'
+        networks:
+            - sezame_net
+    recosystem:
+        build:
+            context: './reco_system'
+            dockerfile: './Dockerfile'
+        image : 'reco_system'
+        ports:
+            - '0.0.0.0:5000:5000'
+        networks:
+            - sezame_net
+networks:
+    sezame_net:
+        

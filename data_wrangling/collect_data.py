@@ -21,29 +21,22 @@ def keep_relevant_spotify_info(input_file, output_file):
         info["artists"] = [artist["name"] for artist in track["track"]["artists"]]
         info["duration"] = track["track"]["duration_ms"]
         info["explicit"] = track["track"]["explicit"]
+        info["image"] = track["track"]["album"]["images"][0]["url"]
+        info["spotify_id"] = track["track"]["id"]
+        info["preview"] = track["track"]["preview_url"]
         tracks_info.append(info)
 
     with open(output_file, "w") as f:
         json.dump(tracks_info, f, indent=2)
 
-def save_data_to_db(songs_json):
+def get_tracks_id(playlist_id):
     """
-    Collect song information to store them in a MongoDB Atlas Instance
+    Get Spotify tracks id from Spotify Playlist Id
     """
+    pass
 
-    with open(songs_json, "r") as f:
-        data = json.load(f)
+
+def get_audio_features(track_id):
     
-    print(data)
-    client = MongoClient(f"mongodb+srv://{config.mongo_user}:{config.mongo_pwd}@{config.mongo_host}/?retryWrites=true&w=majority")
-
-    # sezame db
-    db = client.sezame
-
-    # songs collection
-    collection = db.songs
-
-
 if __name__ == "__main__":
-    # keep_relevant_spotify_info("spotify_playlist.json", "spotify_playist_info.json")
-    save_data_to_db("../data/spotify_playist_info.json")
+    keep_relevant_spotify_info("../data/spotify_playlist.json", "../data/spotify_playist_info.json")

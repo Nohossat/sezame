@@ -1,11 +1,46 @@
 .bloc_result {
     height: 100%;
-    background: linear-gradient(0deg, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 55%);
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    padding: 0em 3em 3em;
+    justify-content: center;
+    padding: 3em 5em;
     color: white;
+    position: relative;
+}
+
+.result_overlay {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 5%, rgba(255, 255, 255, 0) 30%), 
+    linear-gradient(180deg, rgba(0, 0, 0, 1) 5%, rgba(0, 0, 0, 0) 20%), 
+    linear-gradient(90deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 9%),
+    linear-gradient(270deg, rgba(0, 0, 0, 1) 4%, rgba(0, 0, 0, 0) 20%);
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right : 0;
+    bottom : 0;
+    z-index: 2;
+}
+
+.bloc_album {
+    position: relative;
+    width: 65%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.album_cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
 }
 
 .meta {
@@ -19,10 +54,44 @@
     display: flex;
     flex-direction: row;
     width: 100%;
+    height: 100%;
     justify-content: space-between;
     align-items:center;
 }
 
-.btn_margin {
+.bloc_info_artist {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bloc_result_container h1 {
+    font-size: 1.8em;
+    font-size: 4em;
+    margin-top: 0em;
+}
+
+.bloc_result_container h3 {
+    font-size: 1.8em;
+    margin-bottom: 0.5em;
+}
+
+.bloc_result_container h4 {
+    font-weight: 500;
+    margin-bottom: 3em;
+    font-size: 1.2em;
+}
+
+.btn_play {
     margin-right: 3em;
+    z-index: 3;
+    cursor: pointer;
+}
+
+.play_icon {
+    font-size: 2em;
+    width: 100px;
+    margin: auto;
 }
