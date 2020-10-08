@@ -1,8 +1,18 @@
-from sklearn.metrics.pairwise import cosine_similarity
-from pymongo import MongoClient
-import config
+# Data manipulation
 import pandas as pd
 import numpy as np
+from sklearn.preprocessing import OneHotEncoder
+from sklearn.metrics.pairwise import cosine_similarity
+
+
+import sys
+sys.path.append('../')
+
+# Database connection
+from pymongo import MongoClient
+import data_wrangling.config as config
+from bson.objectid import ObjectId
+
 
 def connect_to_mongo():
     # save data to database
@@ -13,69 +23,114 @@ def connect_to_mongo():
     
     return db
 
-def get_songs(db):
+def get_songs(db, matched_song_id=None):
+    """
+    Get songs from the database with relevant features for cosine similarity operation
+
+    Parameters
+    ===============
+    db : MongoDB database hosting the data
+    matched_song_id : matched song MongoDB id 
+
+    Output
+    ===============
+    The program returns the songs features and their names
+    """
+
     songs = db.songs
-    features = {
-        "acousticness" : 1,
-        "danceability" : 1,
-        "duration" : 1,
-        "energy" : 1,
-        "explicit" : 1, 
-        "instrumentalness" : 1,
-        "key" : 1, 
-        "liveness" : 1,
-        "loudness" : 1,
-        "mode" : 1,
-        "speechiness" : 1,
-        "tempo" : 1,
-        "time_signature" : 1,
-        "valence" : 1,
-        "_id" : 0
-    }
 
-    songs_names = list(songs.find({}, {"name" : 1, "artists" : 1, "genre" : 1, "_id" : 0}))
-    songs = list(songs.find({}, features))
-    df_songs = pd.DataFrame(songs)
+    if matched_song_id is None:
+        query = {}
+    else :
+        query = {"_id" : { "$ne" : ObjectId(matched_song_id) }} 
+
+    songs = list(songs.find(query))
     
-    return df_songs, songs_names
+    return songs
 
-def preprocessing(df):
-    # one-hot encode explicit
-    encoded_df = pd.get_dummies(df.explicit, prefix='explicit')
+def preprocessing(df, enc=None):
+    # one-hot encode genre
+    if enc is None:
+        enc = OneHotEncoder(handle_unknown='error', drop='first')
+        enc.fit(df[["genre"]])
 
-    # merge with full dataset
-    full_df = pd.concat([df, encoded_df], axis=1)
-    full_df.drop("explicit", axis=1, inplace=True)
+    genres = enc.transform(df[["genre"]]).toarray()
+    encoded_genres = pd.DataFrame(genres, columns=enc.categories_[0][1:])
+
+    encoded_df = pd.concat([df, encoded_genres], axis=1)
+    encoded_df.drop("genre", axis=1, inplace=True)
+
+    return encoded_df.values, enc
+
+def get_most_similar_songs(db, recognized_song):
+
+    # keep only useful features for the matched song
+    features = [
+        "duration",
+        "explicit",
+        "genre",
+        "acousticness",
+        "danceability",
+        "energy",
+        "instrumentalness",
+        "key",
+        "liveness",
+        "loudness",
+        "mode",
+        "speechiness",
+        "tempo",
+        "time_signature",
+        "valence",
+    ]
+
+    song_info_keys = ["name", "artists", "genre"]
+
+    matched_song_id = str(recognized_song["_id"])
+
+    matched_song = dict()
+    for feature in features:
+        matched_song[feature] = recognized_song[feature]
+
+    # transform the matched_song values into a DataFrame
+    matched_song_df = pd.DataFrame(matched_song, index=[0])
+
+    # get all songs from the database
+    songs = get_songs(db, matched_song_id)
+
+    songs_features_list = []
+    songs_names = []
+
+    for song in songs:
+        song_features = { k:v for (k, v) in song.items() if k in features}
+        song_info = list(map(song.get, song_info_keys))
+        songs_features_list.append(song_features)
+        songs_names.append(song_info)
+
+    song_features_df = pd.DataFrame(songs_features_list)
+
+    # preprocessing
+    encoded_songs, enc = preprocessing(song_features_df)
+    encoded_matched_song, _ = preprocessing(matched_song_df, enc)
     
-    return full_df
-
-def get_most_similar_songs(recognized_song, df_array):
-    cosine_simil_scores = np.array(cosine_similarity(df_array, recognized_song))
-        
+    # compute cosine similarity scores
+    cosine_simil_scores = np.array(cosine_similarity(encoded_songs, encoded_matched_song.reshape(1, -1)))
     indexed_most_similar_songs = np.argsort(np.hstack(cosine_simil_scores))[::-1][:10]
 
+    # get similar songs names and genres
     similar_songs = []
+    
     for idx in indexed_most_similar_songs:
         similar_songs.append(songs_names[idx])
+        print(songs_names[idx])
 
     return similar_songs
     
 
 if __name__ == "__main__":
     db = connect_to_mongo()
-    df_songs, songs_names = get_songs(db)
-    encoded_df = preprocessing(df_songs)
 
-    df_array = encoded_df.values
-
-    # here I just have to get the correct format for the recognized song
-    # create an auth code for spotify
-    # get audio features
-    # format like below and get similar songs
-    recognized_song = np.array([0.539, 0.713, 369462, 0.725, 0.886, 6, 0.111, -9.951, 1, 0.0385, 122.041, 4, 0.240, 1, 0]).reshape(1, -1) # Bonobo - Linked
-    similar_songs = get_most_similar_songs(recognized_song, df_array)
-
-    print(similar_songs)
+    recognized_song = db.songs.find_one({"_id" : ObjectId("5f7d91439fcf6858e3cae166")}) # afro
+    similar_songs = get_most_similar_songs(db, recognized_song)
 
 
 

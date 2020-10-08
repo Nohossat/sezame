@@ -12,3 +12,5 @@ found_var.csv
 found.csv
 sample_fingerprints.csv
 sorted_found.csv
+.metals
+reco_system/config.py

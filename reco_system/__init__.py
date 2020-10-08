@@ -3,4 +3,5 @@ from flask import render_template
 
 app = Flask(__name__)
 
+# import reco_system.views
 import reco_system.views
