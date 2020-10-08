@@ -1,9 +1,10 @@
-import React, {useEffect} from "react";
 import { useRouter } from 'next/router';
+import { ResultContext } from '../contexts/resultContext';
+import React, {useContext, useEffect} from "react";
 
 export default function ListenBtn({name}){
-    
-    const router = useRouter()
+    const { result, storeResult } = useContext(ResultContext);
+    const router = useRouter();
 
     useEffect(
         function onFirstMount() {
@@ -89,14 +90,20 @@ export default function ListenBtn({name}){
                 // get a callback when the server responds
                 xhr.addEventListener('load', () => {
                     var result = JSON.parse(xhr.responseText)
-                    console.log(xhr.responseText)
+                    result = result.data
+                    console.log("=============")
+                    console.log(result.data)
+
+                    storeResult({
+                        song_name : result.song_matched["name"],
+                        artists : result.song_matched["artists"],
+                        sezame_nb : 10,
+                        album_cover : result.song_matched["cover"],
+                        spotify_preview : result.song_matched["preview"]
+                    })
 
                     router.push({
-                        pathname: '/results',
-                        query: { 
-                                song: result.data.song.name,
-                                artists: result.data.song.artists
-                        }
+                        pathname: '/results'
                     })
                 })
             }

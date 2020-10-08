@@ -114,14 +114,33 @@ def match_song(fingerprints):
     
     if confidence < 0.35:
         # we take a 20% confidence threshold in order to consider the song as a valid answer
-        song_guessed = db.songs.find_one({"_id" : ObjectId(first_choice_var)}, {"name" : 1, "artists" : 1, "_id" : 0})
-        print(song_guessed)
-        return "No result", confidence
+        song_guessed = db.songs.find_one({"_id" : ObjectId(first_choice_var)})
+        most_similar_songs = get_most_similar_songs(db, song_guessed)
+        
+        song_info = {
+           "name": "No result", 
+           "artists" : "Anonymous", 
+           "genre" : "None",
+           "preview" : 0,
+           "cover" : "https://m.media-amazon.com/images/I/71OFozfY-cL._SS500_.jpg"
+        }
+
+        print(f"result : {song_info}, confidence : {confidence}, recommendation : {most_similar_songs}")
+        return  song_info, confidence, most_similar_songs
 
     song = db.songs.find_one({"_id" : ObjectId(first_choice_var)})
     
     # get most_similar songs
     most_similar_songs = get_most_similar_songs(db, song)
-    print(f"result : {song}, confidence : {confidence}, recommendation : {most_similar_songs}")
-    return song, confidence, most_similar_songs
+    
+    song_info = {
+           "name": song["name"], 
+           "artists" : song["artists"], 
+           "genre" : song["genre"],
+           "preview" : song["preview"],
+           "cover" : song["image"]
+    }
+    
+    print(f"song_matched : {song_info}, confidence : {confidence}, recommendation : {most_similar_songs}")
+    return song_info, confidence, most_similar_songs
 

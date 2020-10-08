@@ -1,9 +1,13 @@
 import Head from "next/head";
 import Layout from "../components/layout";
 import ResultInfo from "../components/resultInfo";
-import { useRouter } from 'next/router';
+import { ResultContext } from '../contexts/resultContext';
+import React, {useContext, useEffect} from "react";
 
 export default function Results() {
+
+    const { result, storeResult } = useContext(ResultContext);
+
     return (
         <div className="cover">
             <Head>
@@ -12,7 +16,7 @@ export default function Results() {
             </Head>
 
             <Layout>
-                <ResultInfo artist="James Blake" song="Timeless" sezame_nb="3" album="Album : Black Sands - 2017" spotify_link="https://p.scdn.co/mp3-preview/45cb08fdb67744ab7f1f172bb750e9c10415c37a?cid=774b29d4f13844c495f206cafdad9c86">
+                <ResultInfo artist={result.artists} song={result.song_name} sezame_nb={result.sezame_nb} album_cover = {result.album_cover} spotify_link={result.spotify_preview}>
                 </ResultInfo>
             </Layout>
         </div>

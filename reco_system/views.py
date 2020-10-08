@@ -24,10 +24,10 @@ def recognize():
 
     # extract fingerprints
     fingerprints = fingerprint_song(new_file)
-
+  
     # get matched song
     song, confidence, most_similar_songs = match_song(fingerprints)
-    print("test")
+
     end = time.time()
 
-    return jsonify({"song" : song, "time" : end - start, "confidence" : confidence, "similar_songs" : most_similar_songs})
+    return jsonify({"song_matched" : song, "time" : end - start, "confidence" : confidence, "similar_songs" : most_similar_songs})
