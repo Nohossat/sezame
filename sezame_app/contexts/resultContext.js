@@ -8,7 +8,10 @@ const ResultContextProvider = (props) => {
       artists : ["James Blake", "Kendrik Lamar"],
       sezame_nb : 3,
       album_cover : "https://i.scdn.co/image/ab67616d0000b27387d15f78ec75621d40028baf",
-      spotify_preview : "https://p.scdn.co/mp3-preview/45cb08fdb67744ab7f1f172bb750e9c10415c37a?cid=774b29d4f13844c495f206cafdad9c86"
+      spotify_preview : "https://p.scdn.co/mp3-preview/45cb08fdb67744ab7f1f172bb750e9c10415c37a?cid=774b29d4f13844c495f206cafdad9c86",
+      recommendations : [ [ 'Disco Bango - Radio Edit', ["James Blake", "Disclosure"], 'house' ],
+                          [ 'Break My Heart', ["Bonobo", "Erykay Badu"], 'pop' ]
+                        ]
   });
 
   const storeResult = result => {
@@ -17,7 +20,8 @@ const ResultContextProvider = (props) => {
       artists : result.artists,
       sezame_nb : result.sezame_nb,
       album_cover : result.album_cover,
-      spotify_preview : result.spotify_preview
+      spotify_preview : result.spotify_preview,
+      recommendations : result.recommendations
       })
   }
 

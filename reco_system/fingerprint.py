@@ -1,7 +1,6 @@
 # Music processing
 from skimage.feature.peak import peak_local_max
 import librosa
-import librosa.display
 
 #Utils
 import matplotlib.pyplot as plt
@@ -17,49 +16,27 @@ from pymongo import MongoClient
 from bson.objectid import ObjectId
 
 sys.path.append('../')
-
 import data_wrangling.config as config
+from data_wrangling.fingerprinting import generate_fingerprints
+from data_wrangling.db import MongoDatabase
 from .recommendation import get_most_similar_songs
 
-def generate_fingerprints(samples, sr=44100, min_dist=3, fan_value=15, n_fft=4096):
-   # transform data from time-domain to frequency domain
-    signal = np.abs(librosa.stft(samples, n_fft=n_fft))
-    
-    # get log spectrum
-    signal_db = librosa.power_to_db(signal**2, ref=np.max)
-    
-    # get spectrograms peaks
-    peaks = peak_local_max(signal_db, min_distance=min_dist)
-    print(f"nb peaks : {len(peaks)}")
-    
-    # extract fingerprints and create hashes
-    idx_freq = 0
-    idx_time = 1
-    
-    MIN_HASH_TIME_DELTA = 0
-    MAX_HASH_TIME_DELTA = 200
-    FINGERPRINT_REDUCTION = 30
-    
-    hashes = []
-    
-    for i in range(len(peaks)):
-        for j in range(1, fan_value): 
-            if (i + j) < len(peaks):
-                freq1 = peaks[i][idx_freq]
-                freq2 = peaks[i + j][idx_freq]
-                t1 = peaks[i][idx_time]
-                t2 = peaks[i + j][idx_time]
-                t_delta = t2 - t1
-            
-                if MIN_HASH_TIME_DELTA <= t_delta <= MAX_HASH_TIME_DELTA:
-                    h = hashlib.sha1(f"{str(freq1)}|{str(freq2)}|{str(t_delta)}".encode('utf-8'))
-                    hashes.append((h.hexdigest()[0:FINGERPRINT_REDUCTION], int(t1))) # hash and time_offset
-    
-    return hashes
 
-def fingerprint_song(file, sr=44100):
-    samples, sr = librosa.load(file, sr=sr)
-    duration = librosa.get_duration(y=samples, sr=sr) 
+def fingerprint_song(file):
+    """
+    Fingerprint the recorded song
+
+    Parameters
+    =============
+    file : the path of the file recorded
+
+    Output
+    =============
+    Returns the fingerprints of the recorded song
+    """
+
+    samples, _ = librosa.load(file, sr=44100)
+
     fingerprints = generate_fingerprints(samples)
     f = pd.DataFrame(fingerprints, columns=["hash", "offset"])
     f.to_csv("sample_fingerprints.csv")
@@ -80,11 +57,9 @@ def match_song(fingerprints):
     The song matched with confidence level and some recommendations
     """
 
-    uri_local = f"mongodb://{config.mongo_local_user}:{config.mongo_local_pwd}@{config.mongo_localhost}:{config.mongo_local_port}/?authSource=admin&readPreference=primary&ssl=false"
-    uri_cloud = f"mongodb+srv://{config.mongo_user}:{config.mongo_pwd}@{config.mongo_host}/?retryWrites=true&w=majority"
-    client = MongoClient(uri_local)
-    
-    db = client.sezame
+    # connect to database
+    db = MongoDatabase()
+    db.connect()
 
     found_hashes = []
 
@@ -112,7 +87,7 @@ def match_song(fingerprints):
     # we can compute the confidence level of the matched song
     confidence = int(sorted_hashes[first_choice_var]) / total_results
     
-    if confidence < 0.35:
+    if confidence < 0.20:
         # we take a 20% confidence threshold in order to consider the song as a valid answer
         song_guessed = db.songs.find_one({"_id" : ObjectId(first_choice_var)})
         most_similar_songs = get_most_similar_songs(db, song_guessed)

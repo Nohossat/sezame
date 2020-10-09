@@ -33,6 +33,17 @@ def fetch_data(url):
 def get_playlist_info(playlist_id, genre, filename=None):
     """
     Make an API call to get the Spotify Playlist Info
+
+    Parameters
+    ===========
+    playlist_id : the Spotify ID to fetch
+    genre : playlist genre
+    filename : file to output the result to
+
+    Output
+    ===========
+    None
+
     """
     result = fetch_data(url)
     keep_relevant_spotify_info(filename, data=result, genre=genre)
@@ -42,10 +53,15 @@ def keep_relevant_spotify_info(output_file=None, input_file=None, data=None, gen
     From Spotify API Playlist Response, keep the relevant info
 
     Parameters:
+    =============
     output_file : JSON file to output the result
     input_file : Load data from an external JSON file
     data : JSON information about the playlist
     save_mongo : flag to keep the relevant directly to database
+
+    Output
+    =============
+    Save in an external JSOn file or in a MongoDB colelction the info
     """
 
     if input_file is not None:
@@ -132,6 +148,18 @@ def get_audio_features(track_id=None):
         save_audio_features(result, db.songs)
 
 def save_audio_features(result, collection):
+    """
+    Update the song document in MongoDB with its audio features
+
+    Parameters
+    ============
+    result: the audio features fetched with a Spotify API call
+    collection: collection to save the features in
+
+    Output
+    ============
+    None - save data to given collection
+    """
     result_id = result.pop("id")
     result.pop("type")
     result.pop("uri")
@@ -144,19 +172,25 @@ def save_audio_features(result, collection):
     except Exception as e:
         print(e)
 
-def get_songs_from_playlists():
+def get_songs_from_playlists(filename="data/playlist_ids.json"):
     """
-    Fetch a list of Spotify playlists Id and get the songs relative information
+    Fetch a list of Spotify playlists Id 
+    and get the songs relative information
+
+    Parameters
+    ============
+    filename : path from which we can fetch the playlist Spotify Ids
+
+    Output
+    ============
+    None
     """
     current_dir = os.path.dirname(os.getcwd())
-    count = 1
 
-    with open(os.path.join(current_dir, "data/playlist_ids.json"), "r") as fp:
+    with open(os.path.join(current_dir, filename), "r") as fp:
         playlists = json.load(fp)
 
         for playlist in playlists:
-            count = count + 1
-            print(count)
             get_playlist_info(playlist_id=playlist["id"], genre=playlist["genre"])
 
 if __name__ == "__main__":

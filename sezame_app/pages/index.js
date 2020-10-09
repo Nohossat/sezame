@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Layout from '../components/layout'
 import ListenBtn from '../components/listen'
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -14,7 +15,8 @@ export default function Home() {
         <div className="description">
           <h1>Sezame</h1>
           <p>Recognize your favourite songs with our app, press on the symbol below to start recording</p>
-          <ListenBtn name="Listen"></ListenBtn>
+          <ListenBtn></ListenBtn>
+          <Link href="/results"><a className="test">test</a></Link>
         </div>
       </Layout>
 

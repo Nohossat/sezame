@@ -1,0 +1,11 @@
+.recommendations_container {
+    background-color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 4em;
+}
+
+.recommendations_container h3 {
+    font-size: 2em;
+}

@@ -11,17 +11,9 @@ sys.path.append('../')
 # Database connection
 from pymongo import MongoClient
 import data_wrangling.config as config
+from data_wrangling.db import MongoDatabase
 from bson.objectid import ObjectId
 
-
-def connect_to_mongo():
-    # save data to database
-    uri_local = f"mongodb://{config.mongo_local_user}:{config.mongo_local_pwd}@{config.mongo_localhost}:{config.mongo_local_port}/?authSource=admin&readPreference=primary&ssl=false"
-    
-    client = MongoClient(uri_local)
-    db = client.sezame
-    
-    return db
 
 def get_songs(db, matched_song_id=None):
     """
@@ -49,6 +41,18 @@ def get_songs(db, matched_song_id=None):
     return songs
 
 def preprocessing(df, enc=None):
+    """
+    Preprocess the audio features before modeling
+
+    Parameters
+    ============
+    df : Pandas DataFrame to preprocess
+    enc : if a previous encoder has to be taken into account for One-hot Encoding
+
+    Output
+    ============
+    Returns encoded values and an encoder for further preprocessing
+    """
     # one-hot encode genre
     if enc is None:
         enc = OneHotEncoder(handle_unknown='error', drop='first')
@@ -63,6 +67,18 @@ def preprocessing(df, enc=None):
     return encoded_df.values, enc
 
 def get_most_similar_songs(db, recognized_song):
+    """
+    Get similar songs through cosine similarity function
+
+    Parameters
+    ============
+    db: MongoDb database from which to get the features
+    recognized_song : song from which to get the recommendations
+
+    Output
+    ============
+    Returns the similar songs 
+    """
 
     # keep only useful features for the matched song
     features = [
@@ -127,7 +143,8 @@ def get_most_similar_songs(db, recognized_song):
     
 
 if __name__ == "__main__":
-    db = connect_to_mongo()
+    db = MongoDatabase()
+    db.connect()
 
     recognized_song = db.songs.find_one({"_id" : ObjectId("5f7d91439fcf6858e3cae166")}) # afro
     similar_songs = get_most_similar_songs(db, recognized_song)

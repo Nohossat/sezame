@@ -1,7 +1,7 @@
 import styles from "./resultInfo.module.css"
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlayCircle, faTimes } from '@fortawesome/free-solid-svg-icons'
+import { faPlayCircle } from '@fortawesome/free-solid-svg-icons'
 
 export default function ResultInfo({artist, song, sezame_nb, album_cover, spotify_link}) {
     let audio = "";
@@ -43,7 +43,7 @@ export default function ResultInfo({artist, song, sezame_nb, album_cover, spotif
                     <img className={styles.album_cover} src={album_cover} alt="album_cover"/>
                     {spotify_link != 0 &&
                         <span className={styles.btn_play} onClick={() => audioControl(spotify_link)}>
-                            <FontAwesomeIcon icon={faPlayCircle} className={styles.play_icon}/>
+                            <FontAwesomeIcon icon={faPlayCircle} className="play_icon"/>
                         </span>
                     }
                     <div className={styles.result_overlay}></div> 

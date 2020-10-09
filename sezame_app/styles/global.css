@@ -46,3 +46,20 @@ a:hover {
     background-repeat: no-repeat;
     background-position: right;
 }
+
+.play_icon {
+    font-size: 2em;
+    width: 100px;
+    margin: auto;
+}
+
+.mt-1 {
+    margin-top: 1em;
+}
+
+.listen_btn a:hover {
+    color : #361B29;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
