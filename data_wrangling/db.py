@@ -1,5 +1,5 @@
 from pymongo import MongoClient
-import config
+import data_wrangling.config as config
 
 class MongoDatabase():
     def __init__(self):

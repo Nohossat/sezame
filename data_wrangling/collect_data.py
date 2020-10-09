@@ -7,6 +7,7 @@ from pymongo import MongoClient
 import config
 import requests
 import os
+from db import MongoDatabase
 
 def fetch_data(url):
     """
@@ -43,8 +44,9 @@ def get_playlist_info(playlist_id, genre, filename=None):
     Output
     ===========
     None
-
     """
+
+    url = f"https://api.spotify.com/v1/playlists/{playlist_id}"
     result = fetch_data(url)
     keep_relevant_spotify_info(filename, data=result, genre=genre)
 
@@ -115,12 +117,12 @@ def get_audio_features(track_id=None):
     audio features saved in a mongoDB database
     """
 
-    if track_id is None:
-        # connect to MongoDB
-        uri_local = f"mongodb://{config.mongo_local_user}:{config.mongo_local_pwd}@{config.mongo_localhost}:{config.mongo_local_port}/?authSource=admin&readPreference=primary&ssl=false"
-        client = MongoClient(uri_local)
-        db = client.sezame
+    # connect to MongoDB
+    mongo = MongoDatabase()
+    mongo.connect()
+    db = mongo.db
 
+    if track_id is None:
         # get Spotify Tracks ids
         spotify_ids = db.songs.find({}, {"spotify_id" : 1, "_id" : 0})
         all_ids = [item["spotify_id"] for item in spotify_ids]
@@ -142,10 +144,10 @@ def get_audio_features(track_id=None):
             for audio_feat in result["audio_features"]:
                 save_audio_features(audio_feat, db.songs)
     else:
-        # get audio features and save to database
-        url = "https://api.spotify.com/v1/audio-features/{track_id}"
+        # get audio features
+        url = f"https://api.spotify.com/v1/audio-features/{track_id}"
         result = fetch_data(url)
-        save_audio_features(result, db.songs)
+        return result
 
 def save_audio_features(result, collection):
     """
@@ -193,5 +195,60 @@ def get_songs_from_playlists(filename="data/playlist_ids.json"):
         for playlist in playlists:
             get_playlist_info(playlist_id=playlist["id"], genre=playlist["genre"])
 
+def get_info_track(track_id, genre, db):
+    """
+    Get song info + audio features with 2 Spotify API Calls
+
+    Parameters
+    ============
+    track_id : Spotify ID 
+    genre : genre of the song
+
+    Output
+    ===========
+    Save to MongoDB song collection the result
+    """
+
+    url = f"https://api.spotify.com/v1/tracks/{track_id}"
+    track = fetch_data(url)
+
+    info = dict()
+    info["name"] = track["name"]
+    info["artists"] = [artist["name"] for artist in track["artists"]]
+    info["duration"] = track["duration_ms"]
+    info["explicit"] = track["explicit"]
+
+    try:
+        info["image"] = track["album"]["images"][0]["url"]
+    except :
+        info["image"] = "https://m.media-amazon.com/images/I/71OFozfY-cL._SS500_.jpg"
+
+    info["spotify_id"] = track["id"]
+    info["preview"] = track["preview_url"]
+    info["genre"] = genre
+
+    # get audio features
+    audio_features = get_audio_features(track_id)
+    features = {**info, **audio_features}
+
+    # remove useless features
+    useless_features = ["id", "type", "uri", "track_href", "analysis_url"]
+
+    for feat in useless_features:
+        features.pop(feat)
+
+    resulting_id = db.songs.insert_one(features).inserted_id
+
+    return features, resulting_id
+
 if __name__ == "__main__":
-    get_audio_features()
+    # get_audio_features()
+    track_id = "3ibKnFDaa3GhpPGlOUj7ff"
+    genre = "rnb"
+
+    # save to mongoDB
+    mongo = MongoDatabase()
+    mongo.connect()
+    db = mongo.db
+
+    print(get_info_track(track_id, genre, db))

@@ -4,10 +4,13 @@ from skimage.feature.peak import peak_local_max
 import hashlib
 import re
 import os
-from db import MongoDatabase
+import sys
+
+sys.path.append('../')
+from data_wrangling.db import MongoDatabase
 
 
-def generate_fingerprints(samples, min_dist=3, fan_value=6, n_fft=4096):
+def generate_fingerprints(samples, min_dist=4, fan_value=20, n_fft=4096):
     """
     Create the spectrogram of song, compute the highest peaks, create the fingerprints and hash them before storage
 
@@ -126,7 +129,7 @@ def batch_fingerprinting(folder="songs/"):
     files = os.listdir(songs_path)
 
     # extract fingerprints from WAV files
-    for file in files:
+    for file in files[5:]:
         
         filename, extension = os.path.splitext(file)
         
