@@ -1,0 +1,906 @@
+[{
+  "_id": {
+    "$oid": "5f7d91439fcf6858e3cae156"
+  },
+  "name": "THERE FOR YOU",
+  "artists": [
+    "Simi",
+    "Ms Banks"
+  ],
+  "genre": "afro"
+},{
+  "_id": {
+    "$oid": "5f7d91439fcf6858e3cae158"
+  },
+  "name": "Jerusalema (feat. Nomcebo Zikode)",
+  "artists": [
+    "Master KG",
+    "Nomcebo Zikode"
+  ],
+  "genre": "afro"
+},{
+  "_id": {
+    "$oid": "5f7d91439fcf6858e3cae15a"
+  },
+  "name": "PAMI (feat. Wizkid, Adekunle Gold & Omah Lay)",
+  "artists": [
+    "DJ Tunez",
+    "WizKid",
+    "Adekunle Gold",
+    "Omah Lay"
+  ],
+  "genre": "afro"
+},{
+  "_id": {
+    "$oid": "5f7d91439fcf6858e3cae15d"
+  },
+  "name": "UNGAZINCISHI",
+  "artists": [
+    "Riky Rick",
+    "Focalistic",
+    "Tyler ICU"
+  ],
+  "genre": "afro"
+},{
+  "_id": {
+    "$oid": "5f7d91439fcf6858e3cae15f"
+  },
+  "name": "Koroba",
+  "artists": [
+    "Tiwa Savage"
+  ],
+  "genre": "afro"
+},{
+  "_id": {
+    "$oid": "5f7d91439fcf6858e3cae165"
+  },
+  "name": "Damages",
+  "artists": [
+    "Tems"
+  ],
+  "genre": "afro"
+},{
+  "_id": {
+    "$oid": "5f7d91439fcf6858e3cae166"
+  },
+  "name": "Pamela",
+  "artists": [
+    "Wauve",
+    "Stonebwoy",
+    "ZieZie"
+  ],
+  "genre": "afro"
+},{
+  "_id": {
+    "$oid": "5f7d91439fcf6858e3cae16f"
+  },
+  "name": "Woman",
+  "artists": [
+    "Rema"
+  ],
+  "genre": "afro"
+},{
+  "_id": {
+    "$oid": "5f7d91449fcf6858e3cae194"
+  },
+  "name": "Diamonds",
+  "artists": [
+    "Sam Smith"
+  ],
+  "genre": "pop"
+},{
+  "_id": {
+    "$oid": "5f7d91449fcf6858e3cae195"
+  },
+  "name": "Kings & Queens",
+  "artists": [
+    "Ava Max"
+  ],
+  "genre": "pop"
+},{
+  "_id": {
+    "$oid": "5f7d91449fcf6858e3cae196"
+  },
+  "name": "Watermelon Sugar",
+  "artists": [
+    "Harry Styles"
+  ],
+  "genre": "pop"
+},{
+  "_id": {
+    "$oid": "5f7d91449fcf6858e3cae197"
+  },
+  "name": "Wonder",
+  "artists": [
+    "Shawn Mendes"
+  ],
+  "genre": "pop"
+},{
+  "_id": {
+    "$oid": "5f7d91449fcf6858e3cae198"
+  },
+  "name": "Hallucinate",
+  "artists": [
+    "Dua Lipa"
+  ],
+  "genre": "pop"
+},{
+  "_id": {
+    "$oid": "5f7d91449fcf6858e3cae199"
+  },
+  "name": "ily (i love you baby) (feat. Emilee)",
+  "artists": [
+    "Surf Mesa",
+    "Emilee"
+  ],
+  "genre": "pop"
+},{
+  "_id": {
+    "$oid": "5f7d91449fcf6858e3cae19a"
+  },
+  "name": "Supalonely",
+  "artists": [
+    "BENEE",
+    "Gus Dapperton"
+  ],
+  "genre": "pop"
+},{
+  "_id": {
+    "$oid": "5f7d91449fcf6858e3cae19b"
+  },
+  "name": "Mood (feat. Iann Dior)",
+  "artists": [
+    "24kGoldn",
+    "iann dior"
+  ],
+  "genre": "pop"
+},{
+  "_id": {
+    "$oid": "5f7d91449fcf6858e3cae19c"
+  },
+  "name": "Promises (with Sam Smith)",
+  "artists": [
+    "Calvin Harris",
+    "Sam Smith",
+    "Jessie Reyez"
+  ],
+  "genre": "pop"
+},{
+  "_id": {
+    "$oid": "5f7d91449fcf6858e3cae19d"
+  },
+  "name": "Break My Heart",
+  "artists": [
+    "Dua Lipa"
+  ],
+  "genre": "pop"
+},{
+  "_id": {
+    "$oid": "5f7d91449fcf6858e3cae19e"
+  },
+  "name": "Dynamite",
+  "artists": [
+    "BTS"
+  ],
+  "genre": "pop"
+},{
+  "_id": {
+    "$oid": "5f7d91449fcf6858e3cae1a0"
+  },
+  "name": "Dance Monkey",
+  "artists": [
+    "Tones And I"
+  ],
+  "genre": "pop"
+},{
+  "_id": {
+    "$oid": "5f7d91449fcf6858e3cae1a1"
+  },
+  "name": "Blinding Lights",
+  "artists": [
+    "The Weeknd"
+  ],
+  "genre": "pop"
+},{
+  "_id": {
+    "$oid": "5f7d91449fcf6858e3cae1a3"
+  },
+  "name": "Ice Cream (with Selena Gomez)",
+  "artists": [
+    "BLACKPINK",
+    "Selena Gomez"
+  ],
+  "genre": "pop"
+},{
+  "_id": {
+    "$oid": "5f7d91449fcf6858e3cae1aa"
+  },
+  "name": "death bed (coffee for your head)",
+  "artists": [
+    "Powfu",
+    "beabadoobee"
+  ],
+  "genre": "pop"
+},{
+  "_id": {
+    "$oid": "5f7d91449fcf6858e3cae1ab"
+  },
+  "name": "Take You Dancing",
+  "artists": [
+    "Jason Derulo"
+  ],
+  "genre": "pop"
+},{
+  "_id": {
+    "$oid": "5f7d91449fcf6858e3cae1b0"
+  },
+  "name": "UN DIA (ONE DAY) (Feat. Tainy)",
+  "artists": [
+    "J Balvin",
+    "Tainy",
+    "Dua Lipa",
+    "Bad Bunny"
+  ],
+  "genre": "pop"
+},{
+  "_id": {
+    "$oid": "5f7d91449fcf6858e3cae1b1"
+  },
+  "name": "Midnight Sky",
+  "artists": [
+    "Miley Cyrus"
+  ],
+  "genre": "pop"
+},{
+  "_id": {
+    "$oid": "5f7d91449fcf6858e3cae1b4"
+  },
+  "name": "Me Gusta (with Cardi B & Myke Towers)",
+  "artists": [
+    "Anitta",
+    "Myke Towers",
+    "Cardi B"
+  ],
+  "genre": "pop"
+},{
+  "_id": {
+    "$oid": "5f7d91449fcf6858e3cae1b5"
+  },
+  "name": "Heather",
+  "artists": [
+    "Conan Gray"
+  ],
+  "genre": "pop"
+},{
+  "_id": {
+    "$oid": "5f7d91449fcf6858e3cae1c7"
+  },
+  "name": "Holy (feat. Chance The Rapper)",
+  "artists": [
+    "Justin Bieber",
+    "Chance the Rapper"
+  ],
+  "genre": "pop"
+},{
+  "_id": {
+    "$oid": "5f7d91449fcf6858e3cae1df"
+  },
+  "name": "Rain On Me (with Ariana Grande)",
+  "artists": [
+    "Lady Gaga",
+    "Ariana Grande"
+  ],
+  "genre": "pop"
+},{
+  "_id": {
+    "$oid": "5f7d91449fcf6858e3cae1fc"
+  },
+  "name": "Una Locura",
+  "artists": [
+    "Ozuna",
+    "J Balvin",
+    "Chencho Corleone"
+  ],
+  "genre": "latin-urbano"
+},{
+  "_id": {
+    "$oid": "5f7d91449fcf6858e3cae1fe"
+  },
+  "name": "Tattoo - Remix with Camilo",
+  "artists": [
+    "Rauw Alejandro",
+    "Camilo"
+  ],
+  "genre": "latin-urbano"
+},{
+  "_id": {
+    "$oid": "5f7d91449fcf6858e3cae200"
+  },
+  "name": "Mamichula - con Nicki Nicole",
+  "artists": [
+    "Trueno",
+    "Nicki Nicole",
+    "Bizarrap",
+    "Taiu",
+    "TATOOL"
+  ],
+  "genre": "latin-urbano"
+},{
+  "_id": {
+    "$oid": "5f7d91449fcf6858e3cae201"
+  },
+  "name": "La Curiosidad",
+  "artists": [
+    "Jay Wheeler",
+    "DJ Nelson",
+    "Myke Towers"
+  ],
+  "genre": "latin-urbano"
+},{
+  "_id": {
+    "$oid": "5f7d91449fcf6858e3cae202"
+  },
+  "name": "+Linda",
+  "artists": [
+    "Dalex"
+  ],
+  "genre": "latin-urbano"
+},{
+  "_id": {
+    "$oid": "5f7d91449fcf6858e3cae203"
+  },
+  "name": "La Jeepeta - Remix",
+  "artists": [
+    "Nio Garcia",
+    "Anuel AA",
+    "Myke Towers",
+    "Brray",
+    "Juanka"
+  ],
+  "genre": "latin-urbano"
+},{
+  "_id": {
+    "$oid": "5f7d91449fcf6858e3cae206"
+  },
+  "name": "Caramelo",
+  "artists": [
+    "Ozuna"
+  ],
+  "genre": "latin-urbano"
+},{
+  "_id": {
+    "$oid": "5f7d934a37d3e67dcca3237c"
+  },
+  "name": "Strange Timez (feat. Robert Smith)",
+  "artists": [
+    "Gorillaz",
+    "Robert Smith "
+  ],
+  "genre": "indie"
+},{
+  "_id": {
+    "$oid": "5f7d934a37d3e67dcca3237d"
+  },
+  "name": "Hold On",
+  "artists": [
+    "Little Dragon"
+  ],
+  "genre": "indie"
+},{
+  "_id": {
+    "$oid": "5f7d934a37d3e67dcca3237e"
+  },
+  "name": "Drive Thru",
+  "artists": [
+    "The Undercover Dream Lovers"
+  ],
+  "genre": "indie"
+},{
+  "_id": {
+    "$oid": "5f7d934a37d3e67dcca3237f"
+  },
+  "name": "Sad Cowboy",
+  "artists": [
+    "Goat Girl"
+  ],
+  "genre": "indie"
+},{
+  "_id": {
+    "$oid": "5f7d934a37d3e67dcca32380"
+  },
+  "name": "Kerosene!",
+  "artists": [
+    "Yves Tumor"
+  ],
+  "genre": "indie"
+},{
+  "_id": {
+    "$oid": "5f7d934a37d3e67dcca32381"
+  },
+  "name": "Started Out",
+  "artists": [
+    "Georgia"
+  ],
+  "genre": "indie"
+},{
+  "_id": {
+    "$oid": "5f7d934a37d3e67dcca32382"
+  },
+  "name": "You Could If You Can",
+  "artists": [
+    "Astrel K"
+  ],
+  "genre": "indie"
+},{
+  "_id": {
+    "$oid": "5f7d934a37d3e67dcca32383"
+  },
+  "name": "At It Again",
+  "artists": [
+    "Slow Pulp"
+  ],
+  "genre": "indie"
+},{
+  "_id": {
+    "$oid": "5f7d934a37d3e67dcca32384"
+  },
+  "name": "Born in a War",
+  "artists": [
+    "Future Islands"
+  ],
+  "genre": "indie"
+},{
+  "_id": {
+    "$oid": "5f7d934a37d3e67dcca323af"
+  },
+  "name": "Parasite Eve",
+  "artists": [
+    "Bring Me The Horizon"
+  ],
+  "genre": "metal"
+},{
+  "_id": {
+    "$oid": "5f7d934a37d3e67dcca323b0"
+  },
+  "name": "The Remedy",
+  "artists": [
+    "Polaris"
+  ],
+  "genre": "metal"
+},{
+  "_id": {
+    "$oid": "5f7d934a37d3e67dcca323b1"
+  },
+  "name": "As Above, So Below",
+  "artists": [
+    "In This Moment"
+  ],
+  "genre": "metal"
+},{
+  "_id": {
+    "$oid": "5f7d934a37d3e67dcca323b2"
+  },
+  "name": "ONE OF US",
+  "artists": [
+    "FEVER 333"
+  ],
+  "genre": "metal"
+},{
+  "_id": {
+    "$oid": "5f7d934a37d3e67dcca323b5"
+  },
+  "name": "You'll Never Find Me",
+  "artists": [
+    "Korn"
+  ],
+  "genre": "metal"
+},{
+  "_id": {
+    "$oid": "5f7d934a37d3e67dcca323b7"
+  },
+  "name": "Stranded",
+  "artists": [
+    "Gojira"
+  ],
+  "genre": "metal"
+},{
+  "_id": {
+    "$oid": "5f7d934a37d3e67dcca323b8"
+  },
+  "name": "That's My Jam",
+  "artists": [
+    "Skindred"
+  ],
+  "genre": "metal"
+},{
+  "_id": {
+    "$oid": "5f7d934a37d3e67dcca323b9"
+  },
+  "name": "Gasoline",
+  "artists": [
+    "I Prevail"
+  ],
+  "genre": "metal"
+},{
+  "_id": {
+    "$oid": "5f7d934a37d3e67dcca323ba"
+  },
+  "name": "Risen",
+  "artists": [
+    "Sevendust"
+  ],
+  "genre": "metal"
+},{
+  "_id": {
+    "$oid": "5f7d934a37d3e67dcca323bb"
+  },
+  "name": "Nero Forte",
+  "artists": [
+    "Slipknot"
+  ],
+  "genre": "metal"
+},{
+  "_id": {
+    "$oid": "5f7d934a37d3e67dcca32402"
+  },
+  "name": "Back In Black",
+  "artists": [
+    "AC/DC"
+  ],
+  "genre": "rock"
+},{
+  "_id": {
+    "$oid": "5f7d934a37d3e67dcca32465"
+  },
+  "name": "Laugh Now Cry Later (feat. Lil Durk)",
+  "artists": [
+    "Drake",
+    "Lil Durk"
+  ],
+  "genre": "hip-hop"
+},{
+  "_id": {
+    "$oid": "5f7d934a37d3e67dcca32466"
+  },
+  "name": "ROCKSTAR (feat. Roddy Ricch)",
+  "artists": [
+    "DaBaby",
+    "Roddy Ricch"
+  ],
+  "genre": "hip-hop"
+},{
+  "_id": {
+    "$oid": "5f7d934a37d3e67dcca32467"
+  },
+  "name": "POPSTAR (feat. Drake)",
+  "artists": [
+    "DJ Khaled",
+    "Drake"
+  ],
+  "genre": "hip-hop"
+},{
+  "_id": {
+    "$oid": "5f7d934a37d3e67dcca32468"
+  },
+  "name": "For The Night (feat. Lil Baby & DaBaby)",
+  "artists": [
+    "Pop Smoke",
+    "Lil Baby",
+    "DaBaby"
+  ],
+  "genre": "hip-hop"
+},{
+  "_id": {
+    "$oid": "5f7d934a37d3e67dcca3246d"
+  },
+  "name": "WHATS POPPIN (feat. DaBaby, Tory Lanez & Lil Wayne) - Remix",
+  "artists": [
+    "Jack Harlow",
+    "Tory Lanez",
+    "DaBaby",
+    "Lil Wayne"
+  ],
+  "genre": "hip-hop"
+},{
+  "_id": {
+    "$oid": "5f7d934a37d3e67dcca3246f"
+  },
+  "name": "Toosie Slide",
+  "artists": [
+    "Drake"
+  ],
+  "genre": "hip-hop"
+},{
+  "_id": {
+    "$oid": "5f7d934a37d3e67dcca32476"
+  },
+  "name": "WAP (feat. Megan Thee Stallion)",
+  "artists": [
+    "Cardi B",
+    "Megan Thee Stallion"
+  ],
+  "genre": "hip-hop"
+},{
+  "_id": {
+    "$oid": "5f7d934a37d3e67dcca3247d"
+  },
+  "name": "Go Crazy",
+  "artists": [
+    "Chris Brown",
+    "Young Thug"
+  ],
+  "genre": "hip-hop"
+},{
+  "_id": {
+    "$oid": "5f7d934a37d3e67dcca32480"
+  },
+  "name": "Mood Swings (feat. Lil Tjay)",
+  "artists": [
+    "Pop Smoke",
+    "Lil Tjay"
+  ],
+  "genre": "hip-hop"
+},{
+  "_id": {
+    "$oid": "5f7d934a37d3e67dcca32492"
+  },
+  "name": "Come & Go (with Marshmello)",
+  "artists": [
+    "Juice WRLD",
+    "Marshmello"
+  ],
+  "genre": "hip-hop"
+},{
+  "_id": {
+    "$oid": "5f7d934a37d3e67dcca32498"
+  },
+  "name": "Unison",
+  "artists": [
+    "Andrea Oliva"
+  ],
+  "genre": "house"
+},{
+  "_id": {
+    "$oid": "5f7d934a37d3e67dcca32499"
+  },
+  "name": "Pepper Shake",
+  "artists": [
+    "Jamie Jones",
+    "Nicole Moudaber"
+  ],
+  "genre": "house"
+},{
+  "_id": {
+    "$oid": "5f7d934a37d3e67dcca3249c"
+  },
+  "name": "ENERGY",
+  "artists": [
+    "Disclosure"
+  ],
+  "genre": "house"
+},{
+  "_id": {
+    "$oid": "5f7d934a37d3e67dcca3249f"
+  },
+  "name": "Real Love",
+  "artists": [
+    "Martina Budde"
+  ],
+  "genre": "house"
+},{
+  "_id": {
+    "$oid": "5f7d934b37d3e67dcca32501"
+  },
+  "name": "Distinct Operator - Original Mix",
+  "artists": [
+    "UMEK"
+  ],
+  "genre": "electro"
+},{
+  "_id": {
+    "$oid": "5f7d934b37d3e67dcca32502"
+  },
+  "name": "Warped",
+  "artists": [
+    "Joyhauser"
+  ],
+  "genre": "electro"
+},{
+  "_id": {
+    "$oid": "5f7d934b37d3e67dcca32505"
+  },
+  "name": "Changing Worlds",
+  "artists": [
+    "Mark Reeve"
+  ],
+  "genre": "electro"
+},{
+  "_id": {
+    "$oid": "5f7d934b37d3e67dcca32579"
+  },
+  "name": "One (Monster & Infinity)",
+  "artists": [
+    "SuperM"
+  ],
+  "genre": "k-pop"
+},{
+  "_id": {
+    "$oid": "5f7d934b37d3e67dcca325b2"
+  },
+  "name": "Diamonds Are Forever",
+  "artists": [
+    "Shirley Bassey"
+  ],
+  "genre": "soul"
+},{
+  "_id": {
+    "$oid": "5f7d934b37d3e67dcca325e0"
+  },
+  "name": "All Alone",
+  "artists": [
+    "Mal Waldron"
+  ],
+  "genre": "jazz"
+},{
+  "_id": {
+    "$oid": "5f7d934b37d3e67dcca325ef"
+  },
+  "name": "Mirrors - Remastered 2004",
+  "artists": [
+    "Freddie Hubbard"
+  ],
+  "genre": "jazz"
+},{
+  "_id": {
+    "$oid": "5f7d934c37d3e67dcca32626"
+  },
+  "name": "The Lark Ascending",
+  "artists": [
+    "Ralph Vaughan Williams",
+    "Tasmin Little",
+    "BBC Philharmonic",
+    "Andrew Davis"
+  ],
+  "genre": "classical"
+},{
+  "_id": {
+    "$oid": "5f7d934c37d3e67dcca3268c"
+  },
+  "name": "You Don't Love Me (No, No, No) - Extended Mix",
+  "artists": [
+    "Dawn Penn"
+  ],
+  "genre": "dancehall"
+},{
+  "_id": {
+    "$oid": "5f7d934c37d3e67dcca3268e"
+  },
+  "name": "Likes",
+  "artists": [
+    "Chronixx"
+  ],
+  "genre": "dancehall"
+},{
+  "_id": {
+    "$oid": "5f7d934c37d3e67dcca3269d"
+  },
+  "name": "Bounce Along",
+  "artists": [
+    "Wayne Wonder"
+  ],
+  "genre": "dancehall"
+},{
+  "_id": {
+    "$oid": "5f7d934c37d3e67dcca32730"
+  },
+  "name": "Life",
+  "artists": [
+    "Bob Andy"
+  ],
+  "genre": "reggae"
+},{
+  "_id": {
+    "$oid": "5f7d934c37d3e67dcca32732"
+  },
+  "name": "Love Has Found Its Way",
+  "artists": [
+    "Dennis Brown"
+  ],
+  "genre": "reggae"
+},{
+  "_id": {
+    "$oid": "5f7d93c44d60105beb490084"
+  },
+  "name": "Que Se Sepa",
+  "artists": [
+    "Roberto Roena"
+  ],
+  "genre": "salsa"
+},{
+  "_id": {
+    "$oid": "5f7d93c54d60105beb4900e7"
+  },
+  "name": "Damn",
+  "artists": [
+    "Baby Rose"
+  ],
+  "genre": "rnb"
+},{
+  "_id": {
+    "$oid": "5f7d93c54d60105beb4900ec"
+  },
+  "name": "DYING 4 YOUR LOVE",
+  "artists": [
+    "Snoh Aalegra"
+  ],
+  "genre": "rnb"
+},{
+  "_id": {
+    "$oid": "5f7d93c54d60105beb490116"
+  },
+  "name": "Afterglow (feat. Cat Clark)",
+  "artists": [
+    "JiKay",
+    "Milan",
+    "Cat Clark"
+  ],
+  "genre": "trap"
+},{
+  "_id": {
+    "$oid": "5f7d93c54d60105beb49011a"
+  },
+  "name": "Voodoo Money",
+  "artists": [
+    "Serious Klein"
+  ],
+  "genre": "trap"
+},{
+  "_id": {
+    "$oid": "5f7d93c54d60105beb49011c"
+  },
+  "name": "Buss It",
+  "artists": [
+    "TJ Mizell",
+    "SEB"
+  ],
+  "genre": "trap"
+},{
+  "_id": {
+    "$oid": "5f7d93c54d60105beb49017c"
+  },
+  "name": "Old Bone - Jim-E Stack Remix",
+  "artists": [
+    "Wet",
+    "Jim-E Stack"
+  ],
+  "genre": "downtempo"
+},{
+  "_id": {
+    "$oid": "5f7d93c54d60105beb49017e"
+  },
+  "name": "Spinning (feat. Ilsey)",
+  "artists": [
+    "Mark Ronson",
+    "Ilsey"
+  ],
+  "genre": "downtempo"
+},{
+  "_id": {
+    "$oid": "5f7d93c54d60105beb490185"
+  },
+  "name": "Circles - Tyde Remix",
+  "artists": [
+    "Yuki Ame",
+    "Tyde"
+  ],
+  "genre": "downtempo"
+},{
+  "_id": {
+    "$oid": "5f8076f63f80ec807d05ab89"
+  },
+  "name": "Let Me Love You",
+  "artists": [
+    "Mario"
+  ],
+  "genre": "rnb"
+}]

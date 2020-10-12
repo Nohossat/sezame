@@ -12,11 +12,12 @@ def recognize():
     start = time.time()
 
     # load file
-    file_path = request.json[1]["audio"]["path"]
+    file_path = request.json[1]['audio']['path']
+    print(file_path)
+
     confidence_threshold = float(request.json[0]["confidence_thres"])
-    
     filename = open(file_path, 'rb')
-   
+    
     # create wav file
     current_dir = os.getcwd()
     rand_nb = int(round(random.random(), 4) * 10000)

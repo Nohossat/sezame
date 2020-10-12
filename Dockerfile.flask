@@ -1,9 +1,12 @@
 FROM python:3.8
 
 RUN mkdir -p /app/reco_system
+RUN mkdir -p /app/data_wrangling
 WORKDIR /app
-COPY . ./reco_system
+COPY ./reco_system ./reco_system
+COPY ./data_wrangling ./data_wrangling
 
+RUN apt-get update -y && apt-get install -y --no-install-recommends build-essential gcc libsndfile1 
 RUN pip install -r ./reco_system/requirements.txt
 
 EXPOSE 5000

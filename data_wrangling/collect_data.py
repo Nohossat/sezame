@@ -1,13 +1,10 @@
-"""
-We get the Spotify Top 50 songs main info. We previously got the songs info with a CURL command. 
-"""
-
 import json
 from pymongo import MongoClient
 import config
 import requests
 import os
 from db import MongoDatabase
+import argparse
 
 def fetch_data(url):
     """
@@ -212,6 +209,8 @@ def get_info_track(track_id, genre, db):
     url = f"https://api.spotify.com/v1/tracks/{track_id}"
     track = fetch_data(url)
 
+    print(track)
+
     info = dict()
     info["name"] = track["name"]
     info["artists"] = [artist["name"] for artist in track["artists"]]
@@ -242,13 +241,26 @@ def get_info_track(track_id, genre, db):
     return features, resulting_id
 
 if __name__ == "__main__":
-    # get_audio_features()
-    track_id = "3ibKnFDaa3GhpPGlOUj7ff"
-    genre = "rnb"
+    parser = argparse.ArgumentParser(description="Get Playlist info from Spotify API\n")
+    
+    parser.add_argument(
+        '-p', '--playlists', help='get a JSON file with the playlists ids', default=False)
+    parser.add_argument(
+        '-s', '--songs', help='get a track id', default=False)
+    parser.add_argument(
+        '-g', '--genre', help='describe the genre of the track', default="n/a")
+    args = parser.parse_args()
 
-    # save to mongoDB
-    mongo = MongoDatabase()
-    mongo.connect()
-    db = mongo.db
+    if args.playlists:
+        assert(os.path.exists(args.playlists)), "The playlist file doesn't exist"
+        get_songs_from_playlists(filename=args.playlists)
+    elif args.songs:
+        mongo = MongoDatabase()
+        mongo.connect()
+        db = mongo.db
+        get_info_track(args.songs, args.genre, db)
 
-    print(get_info_track(track_id, genre, db))
+    # example track_id = "10lGufP5RmCsUwKDTcPpxs"
+
+
+    

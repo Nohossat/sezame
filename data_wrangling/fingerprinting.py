@@ -5,6 +5,7 @@ import hashlib
 import re
 import os
 import sys
+import argparse
 
 sys.path.append('../')
 from data_wrangling.db import MongoDatabase
@@ -71,14 +72,14 @@ def generate_fingerprints(samples, min_dist=20, fan_value=20, n_fft=4096, is_dic
         return hashes
     return set(hashes)
 
-def fingerprint_song(file, song_collection, sr=44100):
+def fingerprint_song(file, db, sr=44100, save_to_mongo=False):
     """
     Wrapper function for fingerprinting songs in a folder. This function link fingerprints with the song id.
 
     Parameters
     =============
     file : song to fingerprint
-    song_collection : MongoDB collection to use to verify the existence of the song in the database
+    db : MongoDB database
     sr : sample_rate used for generating the spectrogram hence the fingerprints
 
     Output
@@ -87,19 +88,22 @@ def fingerprint_song(file, song_collection, sr=44100):
     """
 
     # get valid song name
-    pattern = re.compile(r"../songs/(.+?).wav")
-    result = pattern.search(file)
+    file_elements = file.split("/")
+    filename = file_elements[len(file_elements) - 1]
+    pattern = re.compile(r"(.+?).wav")
+    result = pattern.search(filename)
     
     if result is None:
         raise Exception("the filename isn't valid")
          
     song_name = result.group(1)
+    print(song_name)
 
     # get song id to see if we can proceed with fingerprinting
-    song_id = song_collection.find_one({"name" : song_name}, projection={"_id": 1})
+    song_id = db.songs.find_one({"name" : song_name}, projection={"_id": 1})
     
     if song_id is None:
-        print(result.group(1), "no match in database")
+        print(song_name, "no match in database")
         print("==========")
         return False
     
@@ -112,6 +116,15 @@ def fingerprint_song(file, song_collection, sr=44100):
         
     for hsh, offset in hashes:
         fingerprints.append((str(song_id["_id"]), hsh, offset))
+
+    # save to mongo if necessary
+    if save_to_mongo and fingerprints:
+        # store fingerprints into the corresponding collection
+        db.fingerprints.insert_many([{'song_id': song_id, 'hash': hash_value, 'offset' : offset} for song_id, hash_value, offset in fingerprints])
+        # get fingerprints number
+        db.songs.update_one({"name" : song_name}, { "$set": { "nb_fingerprints": len(fingerprints) } })
+
+    print(len(fingerprints))
     
     return fingerprints
 
@@ -155,4 +168,24 @@ def batch_fingerprinting(folder="data/songs/"):
             
 
 if __name__ == "__main__":
-    batch_fingerprinting()
+    parser = argparse.ArgumentParser(description="Fingerprint Songs\n")
+    
+    parser.add_argument(
+        '-f', '--file', help='fingerprint the song at this location', default=False)
+    parser.add_argument(
+        '-d', '--directory', help='fingerprint songs lcoated in a folder', default=False)
+    
+    args = parser.parse_args()
+
+    if args.file:
+        assert(os.path.exists(args.file)), "The file doesn't exist"
+        filename, extension = os.path.splitext(args.file)
+        assert(os.path.isfile(args.file) and extension == ".wav"), "It must be a WAV file"
+
+        mongo = MongoDatabase()
+        mongo.connect()
+        fingerprint_song(args.file, mongo.db, save_to_mongo=True)
+
+    elif args.directory:
+        assert(os.path.exists(args.directory)), "The directory doesn't exist"
+        batch_fingerprinting(folder=args.directory)

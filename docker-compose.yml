@@ -1,23 +1,47 @@
 version : '3.7'
 services:
-    web:
+    sezame_app:
         build:
-            context: './sezame_app'
-            dockerfile: './Dockerfile'
+            context: '.'
+            dockerfile: './Dockerfile.nextjs'
         image : 'sezame_app'
+        volumes:
+            - ./tmp:/tmp
         ports:
             - '0.0.0.0:3000:3000'
         networks:
             - sezame_net
     recosystem:
         build:
-            context: './reco_system'
-            dockerfile: './Dockerfile'
+            context: '.'
+            dockerfile: 'Dockerfile.flask'
         image : 'reco_system'
+        volumes:
+            - ./tmp:/tmp
         ports:
             - '0.0.0.0:5000:5000'
         networks:
             - sezame_net
+    mongodb:
+        image : 'mongo'
+        container_name: mongodb
+        hostname: mongodb
+        environment: 
+            - MONGO_INITDB_DATABASE=admin
+            - MONGO_INITDB_ROOT_USERNAME=sezame-admin
+            - MONGO_INITDB_ROOT_PASSWORD=sezame-pass
+            - DB_NAME=sezame
+        volumes:
+            - ./mongo/mongo-volume:/data/db
+            - ./mongo/fingerprints.json:/fingerprints.json
+            - ./mongo/songs.json:/songs.json
+            - ./mongo/mongo-init.sh:/docker-entrypoint-initdb.d/mongo-init.sh
+        ports:
+            - '27018:27017'
+        networks:
+            - sezame_net
+
 networks:
     sezame_net:
+        driver: bridge
         
