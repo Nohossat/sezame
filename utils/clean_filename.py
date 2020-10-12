@@ -2,7 +2,10 @@ import os
 from os import listdir
 import re
 
-path = "songs/"
+main_dir = os.path.dirname(os.getcwd())
+print(main_dir)
+path = os.path.join(main_dir, "data/songs/")
+
 files = listdir(path)
 
 count = 0

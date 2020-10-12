@@ -22,7 +22,7 @@ export default (req, res) => {
                 res.end(JSON.stringify({ success: false, error: err }));
             }
 
-            axios.post('http://127.0.0.1:5000/recognize', files)
+            axios.post('http://127.0.0.1:5000/recognize', [fields, files])
             .then(function (response) {
                 console.dir(response.data);
                 res.statusCode = 200;

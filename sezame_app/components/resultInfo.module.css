@@ -9,10 +9,10 @@
 }
 
 .result_overlay {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 5%, rgba(255, 255, 255, 0) 30%), 
-    linear-gradient(180deg, rgba(0, 0, 0, 1) 5%, rgba(0, 0, 0, 0) 20%), 
-    linear-gradient(90deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 9%),
-    linear-gradient(270deg, rgba(0, 0, 0, 1) 4%, rgba(0, 0, 0, 0) 20%);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0) 5%), 
+    linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 5%), 
+    linear-gradient(90deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 5%),
+    linear-gradient(270deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 5%);
     position: absolute;
     z-index: 2;
     top: 0;
@@ -85,7 +85,17 @@
 }
 
 .btn_play {
-    margin-right: 3em;
     z-index: 3;
     cursor: pointer;
+}
+
+.play_icon, .pause_icon {
+    font-size: 2em;
+    width: 100px;
+    margin: auto;
+    cursor: pointer;
+}
+
+.pause_icon {
+    width: 80px;
 }

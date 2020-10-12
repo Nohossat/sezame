@@ -10,7 +10,7 @@ sys.path.append('../')
 from data_wrangling.db import MongoDatabase
 
 
-def generate_fingerprints(samples, min_dist=4, fan_value=20, n_fft=4096):
+def generate_fingerprints(samples, min_dist=20, fan_value=20, n_fft=4096, is_dict=False):
     """
     Create the spectrogram of song, compute the highest peaks, create the fingerprints and hash them before storage
 
@@ -20,6 +20,7 @@ def generate_fingerprints(samples, min_dist=4, fan_value=20, n_fft=4096):
     min_dist : the minimum distance in pixels between 2 peaks
     fan_value : how many peaks can be connected to one
     n_fft : value used for the STFT
+    is_dict : if indicates if a dictionary with hash as key must be returned
 
     Output
     ==============
@@ -40,13 +41,16 @@ def generate_fingerprints(samples, min_dist=4, fan_value=20, n_fft=4096):
     idx_time = 1
     
     # the fingerprints must have a minimum time distance to be linked
-    MIN_HASH_TIME_DELTA = 0
+    MIN_HASH_TIME_DELTA = 10
     MAX_HASH_TIME_DELTA = 200
     
     # the hash can be pretty long so we will only keep the first 30 characters
     FINGERPRINT_REDUCTION = 30
     
-    hashes = []
+    if is_dict :
+        hashes = {}
+    else : 
+        hashes = []
     
     for i in range(len(peaks)):
         for j in range(1, fan_value): 
@@ -59,9 +63,13 @@ def generate_fingerprints(samples, min_dist=4, fan_value=20, n_fft=4096):
             
                 if MIN_HASH_TIME_DELTA <= t_delta <= MAX_HASH_TIME_DELTA:
                     h = hashlib.sha1(f"{str(freq1)}|{str(freq2)}|{str(t_delta)}".encode('utf-8'))
-                    hashes.append((h.hexdigest()[0:FINGERPRINT_REDUCTION], int(t1))) # hash and time_offset
-    
-    return hashes
+                    if is_dict :
+                        hashes[h.hexdigest()[0:FINGERPRINT_REDUCTION]] = int(t1) # {hash : time_offset}
+                    else : 
+                        hashes.append((h.hexdigest()[0:FINGERPRINT_REDUCTION], int(t1))) # (hash, time_offset)
+    if is_dict:
+        return hashes
+    return set(hashes)
 
 def fingerprint_song(file, song_collection, sr=44100):
     """
@@ -107,7 +115,7 @@ def fingerprint_song(file, song_collection, sr=44100):
     
     return fingerprints
 
-def batch_fingerprinting(folder="songs/"):
+def batch_fingerprinting(folder="data/songs/"):
     """
     Fingerprint several songs in a folder
 
@@ -129,7 +137,7 @@ def batch_fingerprinting(folder="songs/"):
     files = os.listdir(songs_path)
 
     # extract fingerprints from WAV files
-    for file in files[5:]:
+    for file in files[:50]:
         
         filename, extension = os.path.splitext(file)
         

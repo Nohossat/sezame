@@ -99,7 +99,7 @@ def get_most_similar_songs(db, recognized_song):
         "valence",
     ]
 
-    song_info_keys = ["name", "artists", "genre"]
+    song_info_keys = ["name", "artists", "genre", "preview", "image"]
 
     matched_song_id = str(recognized_song["_id"])
 
@@ -118,7 +118,7 @@ def get_most_similar_songs(db, recognized_song):
 
     for song in songs:
         song_features = { k:v for (k, v) in song.items() if k in features}
-        song_info = list(map(song.get, song_info_keys))
+        song_info = { k:v for (k, v) in song.items() if k in song_info_keys}
         songs_features_list.append(song_features)
         songs_names.append(song_info)
 
@@ -130,14 +130,13 @@ def get_most_similar_songs(db, recognized_song):
     
     # compute cosine similarity scores
     cosine_simil_scores = np.array(cosine_similarity(encoded_songs, encoded_matched_song.reshape(1, -1)))
-    indexed_most_similar_songs = np.argsort(np.hstack(cosine_simil_scores))[::-1][:10]
+    indexed_most_similar_songs = np.argsort(np.hstack(cosine_simil_scores))[::-1][:8]
 
     # get similar songs names and genres
     similar_songs = []
     
     for idx in indexed_most_similar_songs:
         similar_songs.append(songs_names[idx])
-        print(songs_names[idx])
 
     return similar_songs
     

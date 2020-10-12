@@ -1,0 +1,73 @@
+.song_recommended {
+  width: 100%;
+}
+
+.btn_play {
+    z-index: 3;
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.image_container {
+    position : relative;
+    width : 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left : 0;
+    right : 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.title {
+    font-size: 1.2em !important;
+    font-weight: 600;
+    margin-bottom: 0;
+    color: white;
+}
+
+.artist {
+    font-size: 1.1em !important;
+    font-weight: 500;
+    margin-top: 0.4em;
+    color: white;
+}
+
+.genre {
+    font-weight: 500;
+    font-size: 0.97em !important;
+    color: white;
+}
+
+.play_icon {
+    font-size: 1em;
+    width: 70px;
+    margin: auto;
+    cursor: pointer;
+    color : white;
+}
+
+.pause_icon {
+    font-size: 1em;
+    width: 50px;
+    color : white;
+}
+
+.recommendInfo {
+    display: flex;
+    width: 200px;
+    flex-direction: column;
+    justify-items: center;
+}

@@ -1,6 +1,21 @@
+.recommendations {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    width: 100%;
+    max-width: 100%;
+    grid-gap: 20px;
+    justify-items: center;
+}
+
+.reco_title {
+    margin-bottom: 3em;
+    color: white;
+    margin-left: 1.5em;
+}
+
 .recommendations_container {
-    background-color: white;
-    height: 100vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     padding: 4em;
