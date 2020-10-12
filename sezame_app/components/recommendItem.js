@@ -66,7 +66,7 @@ export default function RecommendItem({children}) {
                 </motion.span>
             }
         </div>
-        <div class={styles.recommendInfo}>
+        <div className={styles.recommendInfo}>
             <h3 className={styles.title}>{children.name}</h3>
             <h4 className={styles.artist}>{artists}</h4>
             <h5 className={styles.genre}>{children.genre}</h5>

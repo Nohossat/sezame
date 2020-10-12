@@ -8,6 +8,11 @@
     "start": "next start"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.32",
+    "@fortawesome/free-solid-svg-icons": "^5.15.1",
+    "@fortawesome/react-fontawesome": "^0.1.11",
+    "axios": "^0.20.0",
+    "dotenv": "^8.2.0",
     "formidable": "^1.2.2",
     "framer-motion": "^2.8.0",
     "next": "9.5.3",

@@ -76,6 +76,7 @@ export default function ListenBtn(){
                 
                 var xhr = new XMLHttpRequest()
                 let data = new FormData();
+                
                 data.append('audio', blob, 'sample.wav');
                 data.append('confidence_thres', confidence_thres);
 
@@ -173,7 +174,7 @@ export default function ListenBtn(){
             variants={variants}
             whileHover={{
                 color: "#C185A4",
-                scale : 1,
+                scale : 1.1,
                 transition: { duration: 0.5 },
             }}>
             <FontAwesomeIcon icon={faPlayCircle} className="play_icon"/>

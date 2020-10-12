@@ -10,6 +10,8 @@ export const config = {
 }
 
 export default (req, res) => {
+    console.log(process.env.FLASK_URL);
+
     if (req.method === 'POST') {
 
         const form = formidable();
@@ -22,7 +24,9 @@ export default (req, res) => {
                 res.end(JSON.stringify({ success: false, error: err }));
             }
 
-            axios.post('http://127.0.0.1:5000/recognize', [fields, files])
+            let url = process.env.FLASK_URL;
+
+            axios.post(url, [fields, files])
             .then(function (response) {
                 console.dir(response.data);
                 res.statusCode = 200;
