@@ -17,6 +17,7 @@ found_var.csv
 found.csv
 sample_fingerprints.csv
 sorted_found.csv
+sorted_hashes.csv
 README.md
 .gitignore
 tmp/*

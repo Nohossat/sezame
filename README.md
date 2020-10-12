@@ -30,7 +30,7 @@ From there, you can go to http://localhost:3000 and use the application. To know
 {'nb_fingerprints' : { $exists : true }}
 ```
 
-You can also see the default fingerprinted songs in the file : **songs_fingerprinted.json**.
+You can also see the default fingerprinted songs in the file : **data/songs_fingerprinted.json**.
 
 ## Customize your application
 

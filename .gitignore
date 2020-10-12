@@ -15,3 +15,4 @@ mongo
 tmp
 reco_system/uploads
 reco_system/__pycache__
+sorted_hashes.csv
