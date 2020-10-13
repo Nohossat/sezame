@@ -1,60 +1,60 @@
 song_name,prediction,confidence,correct_guess
-Gasoline,Gasoline,0.5,True
-Let Me Love You,Let Me Love You,0.884,True
-THERE FOR YOU,THERE FOR YOU,0.767,True
-Let Me Love You,Let Me Love You,0.884,True
-La Jeepeta - Remix,La Jeepeta - Remix,0.932,True
-Sad Cowboy,Sad Cowboy,0.778,True
-Koroba,Koroba,0.773,True
-Mood (feat. Iann Dior),Mood (feat. Iann Dior),0.841,True
-Heather,Heather,0.798,True
-Sad Cowboy,Sad Cowboy,0.637,True
-Heather,Heather,0.824,True
-WAP (feat. Megan Thee Stallion),WAP (feat. Megan Thee Stallion),0.624,True
-Bounce Along,Bounce Along,0.672,True
-Gasoline,Gasoline,0.955,True
-Mood (feat. Iann Dior),Mood (feat. Iann Dior),0.717,True
-Bam Bam,Bam Bam,0.794,True
-La Jeepeta - Remix,La Jeepeta - Remix,0.493,True
-Caramelo,Caramelo,0.829,True
-Sad Cowboy,Sad Cowboy,0.645,True
-Koroba,Koroba,0.678,True
-Mood (feat. Iann Dior),Mood (feat. Iann Dior),0.7,True
-Caramelo,Caramelo,0.729,True
-Gasoline,Gasoline,0.439,True
-Bounce Along,Bounce Along,0.639,True
-THERE FOR YOU,THERE FOR YOU,0.918,True
-Bounce Along,Bounce Along,0.637,True
-Gasoline,Gasoline,0.592,True
-Bounce Along,Bounce Along,0.968,True
-Koroba,Koroba,0.705,True
-Mood (feat. Iann Dior),Mood (feat. Iann Dior),0.579,True
-Bam Bam,Bam Bam,0.621,True
-Caramelo,Caramelo,0.747,True
-Heather,Heather,0.468,True
-WAP (feat. Megan Thee Stallion),WAP (feat. Megan Thee Stallion),0.657,True
-La Jeepeta - Remix,La Jeepeta - Remix,0.624,True
-Bam Bam,Bam Bam,0.339,True
-Bounce Along,Bounce Along,0.715,True
-Gasoline,Gasoline,0.882,True
-Koroba,Koroba,0.906,True
-Let Me Love You,Let Me Love You,0.814,True
-THERE FOR YOU,THERE FOR YOU,0.758,True
-La Jeepeta - Remix,La Jeepeta - Remix,0.675,True
-Mood (feat. Iann Dior),Mood (feat. Iann Dior),0.759,True
-Koroba,Koroba,0.736,True
-Caramelo,Caramelo,0.712,True
-THERE FOR YOU,THERE FOR YOU,0.741,True
-Let Me Love You,Let Me Love You,0.817,True
-Heather,Heather,0.76,True
-WAP (feat. Megan Thee Stallion),WAP (feat. Megan Thee Stallion),0.657,True
-WAP (feat. Megan Thee Stallion),WAP (feat. Megan Thee Stallion),0.656,True
-La Jeepeta - Remix,La Jeepeta - Remix,0.663,True
-WAP (feat. Megan Thee Stallion),WAP (feat. Megan Thee Stallion),0.839,True
-Heather,Heather,0.837,True
-Sad Cowboy,Sad Cowboy,0.786,True
-Caramelo,Caramelo,0.828,True
-Let Me Love You,Let Me Love You,0.7,True
-Bam Bam,Bam Bam,0.386,True
-THERE FOR YOU,THERE FOR YOU,0.617,True
-Sad Cowboy,Sad Cowboy,0.813,True
+Gasoline,THERE FOR YOU,0.286,False
+Let Me Love You,Let Me Love You,0.965,True
+THERE FOR YOU,THERE FOR YOU,0.929,True
+Let Me Love You,Let Me Love You,0.954,True
+La Jeepeta - Remix,La Jeepeta - Remix,0.98,True
+Sad Cowboy,Warped,0.2,False
+Koroba,Koroba,0.935,True
+Mood (feat. Iann Dior),Mood (feat. Iann Dior),0.96,True
+Heather,Pepper Shake,0.333,False
+Sad Cowboy,Distinct Operator - Original Mix,0.25,False
+Heather,Caramelo,0.091,False
+WAP (feat. Megan Thee Stallion),WAP (feat. Megan Thee Stallion),0.792,True
+Bounce Along,Bounce Along,0.877,True
+Gasoline,Buss It,0.6,False
+Mood (feat. Iann Dior),Mood (feat. Iann Dior),0.946,True
+Bam Bam,"PAMI (feat. Wizkid, Adekunle Gold & Omah Lay)",0.25,False
+La Jeepeta - Remix,La Jeepeta - Remix,0.816,True
+Caramelo,Caramelo,0.941,True
+Sad Cowboy,Buss It,0.182,False
+Koroba,Koroba,0.875,True
+Mood (feat. Iann Dior),Mood (feat. Iann Dior),0.925,True
+Caramelo,Caramelo,0.971,True
+Gasoline,Unison,0.25,False
+Bounce Along,Bounce Along,0.789,True
+THERE FOR YOU,THERE FOR YOU,0.962,True
+Bounce Along,Bounce Along,0.914,True
+Gasoline,death bed (coffee for your head),0.25,False
+Bounce Along,Bounce Along,0.99,True
+Koroba,Koroba,0.879,True
+Mood (feat. Iann Dior),Mood (feat. Iann Dior),0.846,True
+Bam Bam,Back In Black,0.2,False
+Caramelo,Caramelo,0.971,True
+Heather,Unison,0.583,False
+WAP (feat. Megan Thee Stallion),WAP (feat. Megan Thee Stallion),0.929,True
+La Jeepeta - Remix,La Jeepeta - Remix,0.821,True
+Bam Bam,Warped,0.333,False
+Bounce Along,Bounce Along,0.939,True
+Gasoline,Midnight Sky,0.222,False
+Koroba,Koroba,0.984,True
+Let Me Love You,Let Me Love You,0.952,True
+THERE FOR YOU,THERE FOR YOU,0.919,True
+La Jeepeta - Remix,La Jeepeta - Remix,0.967,True
+Mood (feat. Iann Dior),Mood (feat. Iann Dior),0.924,True
+Koroba,Koroba,0.947,True
+Caramelo,Caramelo,0.938,True
+THERE FOR YOU,THERE FOR YOU,0.88,True
+Let Me Love You,Let Me Love You,0.982,True
+Heather,"You Don't Love Me (No, No, No) - Extended Mix",0.375,False
+WAP (feat. Megan Thee Stallion),WAP (feat. Megan Thee Stallion),0.774,True
+WAP (feat. Megan Thee Stallion),WAP (feat. Megan Thee Stallion),0.857,True
+La Jeepeta - Remix,La Jeepeta - Remix,0.951,True
+WAP (feat. Megan Thee Stallion),WAP (feat. Megan Thee Stallion),0.969,True
+Heather,Bounce Along,0.2,False
+Sad Cowboy,Midnight Sky,0.286,False
+Caramelo,Caramelo,0.956,True
+Let Me Love You,Let Me Love You,0.929,True
+Bam Bam,Caramelo,0.2,False
+THERE FOR YOU,THERE FOR YOU,0.824,True
+Sad Cowboy,Midnight Sky,0.176,False

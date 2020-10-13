@@ -11,7 +11,7 @@ sys.path.append('../')
 from data_wrangling.db import MongoDatabase
 
 
-def generate_fingerprints(samples, min_dist=14, fan_value=22, n_fft=4096, is_dict=False):
+def generate_fingerprints(samples, min_dist=16, fan_value=20, n_fft=4096, is_dict=False):
     """
     Create the spectrogram of song, compute the highest peaks, create the fingerprints and hash them before storage
 
@@ -148,7 +148,7 @@ def batch_fingerprinting(folder="data/songs/"):
     files = os.listdir(songs_path)
 
     # extract fingerprints from WAV files
-    for file in files:
+    for file in files[:50]:
         filename, extension = os.path.splitext(file)
         
         if extension == ".wav":

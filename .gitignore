@@ -10,8 +10,10 @@ found.csv
 sample_fingerprints.csv
 sorted_found.csv
 .metals
-mongo
+mongo/mongo-volume
 tmp
 reco_system/uploads
 reco_system/__pycache__
 sorted_hashes.csv
+hashes_grouped.csv
+found_hashes.csv
