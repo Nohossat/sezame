@@ -1,18 +1,19 @@
 import { useRouter } from 'next/router';
 import { ResultContext } from '../contexts/resultContext';
-import React, {useContext, useEffect} from "react";
+import React, {useContext, useEffect, useState} from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlayCircle } from '@fortawesome/free-solid-svg-icons';
 import { motion } from "framer-motion";
 
 export default function ListenBtn(){
     const { result, storeResult } = useContext(ResultContext);
+
     const router = useRouter();
     let limit = 5;
     let count = 0;
-    let currentPathResult = false;
     let recording = false;
     let queue = new Array();
+    let currentPathResult;
 
     useEffect(
         function onFirstMount() {
@@ -45,7 +46,7 @@ export default function ListenBtn(){
                     setTimeout(function(){ 
                         // stop recording + send data to Flask
                         stopRecord(rec, gumStream);
-                    }, 8000);
+                    }, 10000);
 
                 }).catch(function(err){
                     console.log(err)
@@ -68,7 +69,7 @@ export default function ListenBtn(){
                 let nb_request = Math.random();
                 queue.push(nb_request);
 
-                let confidence_thres = 0.6;
+                let confidence_thres = 0.4;
 
                 if (result.confidence >= confidence_thres || router.pathname == "/results" ) {
                     return true
@@ -117,6 +118,8 @@ export default function ListenBtn(){
             const recorder = (e) => {
                 e.preventDefault();
                 recording = true;
+                currentPathResult = false;
+                console.log(currentPathResult);
 
                 // we will send 3 seconds each time to the Flask APi to analyze the song when 
                 // it finds a match with a good confidence value, we display the result
@@ -133,7 +136,7 @@ export default function ListenBtn(){
                     if (count == limit) {
                         clearInterval(recording);
                     }
-                }, 2000);
+                }, 3000);
 
             }
 

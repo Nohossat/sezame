@@ -1,0 +1,5 @@
+mongo_localhost = "mongodb"
+mongo_local_user = "XXXX"
+mongo_local_pwd = "XXXX"
+mongo_local_port = "27017"
+spotify_auth = "XXX"

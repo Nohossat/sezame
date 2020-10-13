@@ -11,7 +11,7 @@ sys.path.append('../')
 from data_wrangling.db import MongoDatabase
 
 
-def generate_fingerprints(samples, min_dist=20, fan_value=20, n_fft=4096, is_dict=False):
+def generate_fingerprints(samples, min_dist=14, fan_value=22, n_fft=4096, is_dict=False):
     """
     Create the spectrogram of song, compute the highest peaks, create the fingerprints and hash them before storage
 
@@ -97,7 +97,6 @@ def fingerprint_song(file, db, sr=44100, save_to_mongo=False):
         raise Exception("the filename isn't valid")
          
     song_name = result.group(1)
-    print(song_name)
 
     # get song id to see if we can proceed with fingerprinting
     song_id = db.songs.find_one({"name" : song_name}, projection={"_id": 1})
@@ -125,7 +124,6 @@ def fingerprint_song(file, db, sr=44100, save_to_mongo=False):
         db.songs.update_one({"name" : song_name}, { "$set": { "nb_fingerprints": len(fingerprints) } })
 
     print(len(fingerprints))
-    
     return fingerprints
 
 def batch_fingerprinting(folder="data/songs/"):
@@ -150,21 +148,13 @@ def batch_fingerprinting(folder="data/songs/"):
     files = os.listdir(songs_path)
 
     # extract fingerprints from WAV files
-    for file in files[:50]:
-        
+    for file in files:
         filename, extension = os.path.splitext(file)
         
         if extension == ".wav":
-            fingerprints_song = fingerprint_song(os.path.join(songs_path, file), mongo.db.songs)
-            
+            fingerprints_song = fingerprint_song(os.path.join(songs_path, file), mongo.db, save_to_mongo=True)
             if fingerprints_song:
                 print(fingerprints_song[0], len(fingerprints_song))
-                
-                # store fingerprints into the corresponding collection
-                mongo.db.fingerprints.insert_many([{'song_id': song_id, 'hash': hash_value, 'offset' : offset} for song_id, hash_value, offset in fingerprints_song])
-                
-                # get fingerprints number
-                mongo.db.songs.update_one({"name" : filename}, { "$set": { "nb_fingerprints": len(fingerprints_song) } })
             
 
 if __name__ == "__main__":
@@ -187,5 +177,7 @@ if __name__ == "__main__":
         fingerprint_song(args.file, mongo.db, save_to_mongo=True)
 
     elif args.directory:
-        assert(os.path.exists(args.directory)), "The directory doesn't exist"
+        main_dir = os.path.dirname(os.getcwd())
+        songs_path = os.path.join(main_dir, args.directory)
+        assert(os.path.exists(songs_path)), "The directory doesn't exist"
         batch_fingerprinting(folder=args.directory)

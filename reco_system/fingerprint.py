@@ -1,6 +1,6 @@
 # Music processing
-from skimage.feature.peak import peak_local_max
 import librosa
+from skimage.feature.peak import peak_local_max
 
 #Utils
 import matplotlib.pyplot as plt
@@ -19,7 +19,7 @@ sys.path.append('../')
 import data_wrangling.config as config
 from data_wrangling.fingerprinting import generate_fingerprints
 from data_wrangling.db import MongoDatabase
-from .recommendation import get_most_similar_songs
+from reco_system.recommendation import get_most_similar_songs
 
 
 def fingerprint_song(file):
@@ -69,7 +69,7 @@ def send_not_found(confidence=None):
     print(f"result : {song_info}")
     return  song_info, confidence, []
 
-def match_song(fingerprints, confidence_thres=0.02):
+def match_song(fingerprints, confidence_thres=0.002):
     """
     Match sample fingerprints with the ones in the database => get the most similar song id
 
@@ -129,6 +129,8 @@ def match_song(fingerprints, confidence_thres=0.02):
     # we can compute the confidence level of the matched song
     confidence = round(int(sorted_hashes[first_choice]) / nb_results, 3)
     
+    print(sorted_hashes[first_choice])
+    print(confidence)
     if confidence < confidence_thres:
         return send_not_found(confidence=confidence)
 
