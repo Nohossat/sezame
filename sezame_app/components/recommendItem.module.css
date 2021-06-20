@@ -1,5 +1,8 @@
 .song_recommended {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .btn_play {
@@ -35,20 +38,18 @@
     font-size: 1.2em !important;
     font-weight: 600;
     margin-bottom: 0;
-    color: white;
 }
 
 .artist {
     font-size: 1.1em !important;
     font-weight: 500;
     margin-top: 0.4em;
-    color: white;
 }
 
 .genre {
+    margin-top: 0em;
     font-weight: 500;
     font-size: 0.97em !important;
-    color: white;
 }
 
 .play_icon {
@@ -70,4 +71,13 @@
     width: 200px;
     flex-direction: column;
     justify-items: center;
+    color : #fff;
+}
+
+.recommendInfo_white {
+    display: flex;
+    width: 200px;
+    flex-direction: column;
+    justify-items: center;
+    color : #000;
 }

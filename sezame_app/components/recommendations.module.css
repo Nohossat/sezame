@@ -4,7 +4,7 @@
     grid-template-rows: auto;
     width: 100%;
     max-width: 100%;
-    grid-gap: 20px;
+    grid-gap: 50px 20px;
     justify-items: center;
 }
 

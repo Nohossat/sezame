@@ -40,7 +40,7 @@ export default function Results() {
                 <Layout>
                     <motion.div initial="initial" animate="enter" exit="exit" variants={resultVariants}>
                         <div className="cover">
-                            <ResultInfo artist={result.artists} song={result.song_name} sezame_nb={result.sezame_nb} album_cover = {result.album_cover} spotify_link={result.spotify_preview}>
+                            <ResultInfo artists={result.artists} song={result.name} sezame_nb={result.sezame_nb} album_cover = {result.image} spotify_link={result.preview}>
                             </ResultInfo>
                         </div>
                         <div>

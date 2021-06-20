@@ -10,7 +10,6 @@ export const config = {
 }
 
 export default (req, res) => {
-    console.log(process.env.FLASK_URL);
 
     if (req.method === 'POST') {
 
@@ -25,6 +24,7 @@ export default (req, res) => {
             }
 
             let url = process.env.FLASK_URL;
+            console.log(url);
 
             axios.post(url, [fields, files])
             .then(function (response) {

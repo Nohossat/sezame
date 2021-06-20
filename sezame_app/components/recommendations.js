@@ -1,6 +1,6 @@
-import styles from './recommendations.module.css'
-import React from 'react'
-import RecommendItem from './recommendItem'
+import styles from './recommendations.module.css';
+import React from 'react';
+import RecommendItem from './recommendItem';
 
 export default function Recommendations({children}) {
 

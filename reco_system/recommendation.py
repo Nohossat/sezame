@@ -40,6 +40,7 @@ def get_songs(db, matched_song_id=None):
     
     return songs
 
+
 def preprocessing(df, enc=None):
     """
     Preprocess the audio features before modeling
@@ -65,6 +66,7 @@ def preprocessing(df, enc=None):
     encoded_df.drop("genre", axis=1, inplace=True)
 
     return encoded_df.values, enc
+
 
 def get_most_similar_songs(db, recognized_song):
     """
@@ -117,8 +119,8 @@ def get_most_similar_songs(db, recognized_song):
     songs_names = []
 
     for song in songs:
-        song_features = { k:v for (k, v) in song.items() if k in features}
-        song_info = { k:v for (k, v) in song.items() if k in song_info_keys}
+        song_features = {k: v for (k, v) in song.items() if k in features}
+        song_info = {k: v for (k, v) in song.items() if k in song_info_keys}
         songs_features_list.append(song_features)
         songs_names.append(song_info)
 

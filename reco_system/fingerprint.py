@@ -2,12 +2,12 @@
 import librosa
 from skimage.feature.peak import peak_local_max
 
-#Utils
+# Utils
 import matplotlib.pyplot as plt
 import numpy as np
 import hashlib
 import sys
-import os 
+import os
 import re
 import pandas as pd
 
@@ -42,13 +42,14 @@ def fingerprint_song(file):
 
     return fingerprints
 
+
 def send_not_found(confidence=None):
     """
     Return a not found object
 
     Parameters
     =============
-    None
+    confidence : if this parameter is None, we reset it to 0
 
     Output
     =============
@@ -59,15 +60,16 @@ def send_not_found(confidence=None):
         confidence = 0
 
     song_info = {
-           "name": "No result", 
-           "artists" : "Anonymous", 
-           "genre" : "None",
-           "preview" : 0,
-           "cover" : "https://m.media-amazon.com/images/I/71OFozfY-cL._SS500_.jpg"
+        "name": "No result",
+        "artists": "Anonymous",
+        "genre": "None",
+        "preview": 0,
+        "cover": "https://m.media-amazon.com/images/I/71OFozfY-cL._SS500_.jpg"
     }
 
     print(f"result : {song_info}")
-    return  song_info, confidence, []
+    return song_info, confidence, []
+
 
 def match_song(fingerprints, confidence_thres=0.002):
     """
@@ -89,8 +91,8 @@ def match_song(fingerprints, confidence_thres=0.002):
     found_hashes = []
 
     # save matched fingerprints and offsets differences in found hashes array
-    hashes = list(fingerprints.keys()) 
-    total_results = list(mongo.db.fingerprints.find( { "hash": { "$in": hashes } } ))
+    hashes = list(fingerprints.keys())
+    total_results = list(mongo.db.fingerprints.find({"hash": {"$in": hashes}}))
     differences = []
 
     for result in total_results:
@@ -99,9 +101,9 @@ def match_song(fingerprints, confidence_thres=0.002):
         found_hashes.append([result["hash"], result["offset"] - sample_offset, result["song_id"]])
 
     nb_results = len(found_hashes)
-    
+
     # if no result, we return a 404 not found
-    if nb_results == 0 :
+    if nb_results == 0:
         return send_not_found()
 
     # we will compare the song_id with the most hashes and the songId with the hashes the most aligned
@@ -128,24 +130,23 @@ def match_song(fingerprints, confidence_thres=0.002):
 
     # we can compute the confidence level of the matched song
     confidence = round(int(sorted_hashes[first_choice]) / nb_results, 3)
-    
+
     print(sorted_hashes[first_choice])
     print(confidence)
     if confidence < confidence_thres:
         return send_not_found(confidence=confidence)
 
-    # Fetch recomendations if the confidence level is ok
-    song = mongo.db.songs.find_one({"_id" : ObjectId(first_choice)})
+    # Fetch recommendations if the confidence level is ok
+    song = mongo.db.songs.find_one({"_id": ObjectId(first_choice)})
     most_similar_songs = get_most_similar_songs(mongo.db, song)
-    
+
     song_info = {
-           "name": song["name"], 
-           "artists" : song["artists"], 
-           "genre" : song["genre"],
-           "preview" : song["preview"],
-           "cover" : song["image"]
+        "name": song["name"],
+        "artists": song["artists"],
+        "genre": song["genre"],
+        "preview": song["preview"],
+        "cover": song["image"]
     }
-    
+
     # print(f"song_matched : {song_info}, confidence : {confidence}, recommendation : {most_similar_songs}")
     return song_info, confidence, most_similar_songs
-

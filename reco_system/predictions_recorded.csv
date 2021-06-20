@@ -1,68 +1,68 @@
 song_name,prediction,confidence,correct_guess
-Supalonely,Supalonely,0.211,True
-Sad Cowboy,Una Locura,0.079,False
-WAP (feat. Megan Thee Stallion),Runnin,0.059,False
-Soledad de Murcia,Kerosene!,0.118,False
-THERE FOR YOU,"You Don't Love Me (No, No, No) - Extended Mix",0.062,False
-GREECE (feat. Drake),GREECE (feat. Drake),0.111,True
-Bam Bam,"WHATS POPPIN (feat. DaBaby, Tory Lanez & Lil Wayne) - Remix",0.143,False
-Parasite Eve,Unapologetic Raver,0.133,False
-Bounce Along,Touch,0.105,False
-Sad Cowboy,Hope,0.095,False
-WAP (feat. Megan Thee Stallion),WAP (feat. Megan Thee Stallion),0.125,True
-Sad Cowboy,Distinct Operator - Original Mix,0.077,False
-ONE OF US,Soledad de Murcia,0.125,False
-WAP (feat. Megan Thee Stallion),Unison,0.125,False
-You'll Never Find Me,Old Bone - Jim-E Stack Remix,0.057,False
-ONE OF US,Soledad de Murcia,0.071,False
-You'll Never Find Me,Wolves (feat. Post Malone),0.103,False
-Bam Bam,Koroba,0.091,False
-Parasite Eve,Laugh Now Cry Later (feat. Lil Durk),0.222,False
-Bam Bam,Born in a War,0.077,False
-WAP (feat. Megan Thee Stallion),Una Locura,0.125,False
-WAP (feat. Megan Thee Stallion),Gasoline,0.048,False
-You'll Never Find Me,Mood (feat. Iann Dior),0.182,False
-He Wasn't Man Enough,At It Again,0.118,False
-Sad Cowboy,Midnight Sky,0.111,False
-THERE FOR YOU,THERE FOR YOU,0.194,True
-Bam Bam,Bam Bam,0.1,True
-Supalonely,Supalonely,0.25,True
-WAP (feat. Megan Thee Stallion),WAP (feat. Megan Thee Stallion),0.105,True
-He Wasn't Man Enough,Wolves (feat. Post Malone),0.167,False
-Supalonely,Supalonely,0.205,True
-Bounce Along,Bounce Along,0.182,True
-WAP (feat. Megan Thee Stallion),"Nothing Can Save You, Accept Darkness",0.143,False
-Supalonely,Supalonely,0.135,True
-He Wasn't Man Enough,La Jeepeta - Remix,0.065,False
-Soledad de Murcia,ily (i love you baby) (feat. Emilee),0.094,False
-Parasite Eve,Pepper Shake,0.105,False
-He Wasn't Man Enough,POPSTAR (feat. Drake),0.118,False
-You'll Never Find Me,Ice Cream (with Selena Gomez),0.118,False
-ONE OF US,Should I Stay or Should I Go - Remastered,0.154,False
-Sad Cowboy,Started Out,0.077,False
-GREECE (feat. Drake),GREECE (feat. Drake),0.238,True
-Soledad de Murcia,Kerosene!,0.083,False
-LIKE I WANT YOU - Acoustic,The Awakening,0.143,False
+Supalonely,Supalonely,0.444,True
+Sad Cowboy,At It Again,0.167,False
+WAP (feat. Megan Thee Stallion),WAP (feat. Megan Thee Stallion),0.167,True
+Soledad de Murcia,ENERGY,0.5,False
+THERE FOR YOU,THERE FOR YOU,0.5,True
+GREECE (feat. Drake),Caramelo,0.4,False
+Bam Bam,Unison,0.333,False
+Parasite Eve,Parasite Eve,0.286,True
+Bounce Along,"PAMI (feat. Wizkid, Adekunle Gold & Omah Lay)",0.4,False
+Sad Cowboy,Damages,0.167,False
+WAP (feat. Megan Thee Stallion),Old Bone - Jim-E Stack Remix,0.25,False
+Sad Cowboy,Distinct Operator - Original Mix,0.222,False
+ONE OF US,Distinct Operator - Original Mix,0.2,False
+WAP (feat. Megan Thee Stallion),The Lark Ascending,0.25,False
+You'll Never Find Me,Old Bone - Jim-E Stack Remix,0.2,False
+ONE OF US,Caramelo,0.167,False
+You'll Never Find Me,Go Crazy,0.5,False
+Bam Bam,Koroba,0.667,False
+Parasite Eve,Que Se Sepa,1.0,False
+Bam Bam,Warped,0.167,False
+WAP (feat. Megan Thee Stallion),Changing Worlds,0.333,False
+WAP (feat. Megan Thee Stallion),Bounce Along,0.25,False
+You'll Never Find Me,Warped,0.25,False
+He Wasn't Man Enough,At It Again,0.2,False
+Sad Cowboy,Supalonely,0.333,False
+THERE FOR YOU,THERE FOR YOU,0.385,True
+Bam Bam,WAP (feat. Megan Thee Stallion),0.333,False
+Supalonely,Supalonely,0.714,True
+WAP (feat. Megan Thee Stallion),WAP (feat. Megan Thee Stallion),0.333,True
+He Wasn't Man Enough,Changing Worlds,1.0,False
+Supalonely,Supalonely,0.7,True
 Bounce Along,Bounce Along,0.333,True
-Soledad de Murcia,Dance Monkey,0.067,False
-THERE FOR YOU,THERE FOR YOU,0.211,True
-GREECE (feat. Drake),GREECE (feat. Drake),0.27,True
-LIKE I WANT YOU - Acoustic,Mood Swings (feat. Lil Tjay),0.115,False
-LIKE I WANT YOU - Acoustic,Planet X,0.038,False
-Soledad de Murcia,Ni**as In Paris,0.077,False
-He Wasn't Man Enough,Changing Worlds,0.2,False
-ONE OF US,Promises (with Sam Smith),0.143,False
-Parasite Eve,Unison,0.105,False
-Supalonely,Supalonely,0.091,True
-Bam Bam,Bam Bam,0.217,True
-THERE FOR YOU,THERE FOR YOU,0.171,True
-GREECE (feat. Drake),GREECE (feat. Drake),0.125,True
-Bounce Along,Cant Satisfy Her,0.087,False
-LIKE I WANT YOU - Acoustic,Mood Swings (feat. Lil Tjay),0.1,False
-GREECE (feat. Drake),GREECE (feat. Drake),0.4,True
-LIKE I WANT YOU - Acoustic,Unison,0.05,False
-ONE OF US,ily (i love you baby) (feat. Emilee),0.087,False
-THERE FOR YOU,THERE FOR YOU,0.143,True
-You'll Never Find Me,Unapologetic Raver,0.125,False
-Parasite Eve,Ice Cream (with Selena Gomez),0.105,False
-Bounce Along,Bounce Along,0.548,True
+WAP (feat. Megan Thee Stallion),Circles - Tyde Remix,0.4,False
+Supalonely,Supalonely,0.625,True
+He Wasn't Man Enough,Distinct Operator - Original Mix,0.333,False
+Soledad de Murcia,Wonder,0.125,False
+Parasite Eve,Real Love,0.333,False
+He Wasn't Man Enough,Changing Worlds,1.0,False
+You'll Never Find Me,Parasite Eve,0.333,False
+ONE OF US,Back In Black,1.0,False
+Sad Cowboy,Supalonely,1.0,False
+GREECE (feat. Drake),La Jeepeta - Remix,0.333,False
+Soledad de Murcia,Warped,0.125,False
+LIKE I WANT YOU - Acoustic,No result,0.0,False
+Bounce Along,Bounce Along,0.455,True
+Soledad de Murcia,No result,0.0,False
+THERE FOR YOU,THERE FOR YOU,0.5,True
+GREECE (feat. Drake),Midnight Sky,0.333,False
+LIKE I WANT YOU - Acoustic,Caramelo,0.125,False
+LIKE I WANT YOU - Acoustic,Circles - Tyde Remix,0.167,False
+Soledad de Murcia,Circles - Tyde Remix,0.167,False
+He Wasn't Man Enough,Changing Worlds,0.667,False
+ONE OF US,La Jeepeta - Remix,0.5,False
+Parasite Eve,Real Love,0.333,False
+Supalonely,Born in a War,0.333,False
+Bam Bam,Unison,0.333,False
+THERE FOR YOU,THERE FOR YOU,0.364,True
+GREECE (feat. Drake),Caramelo,0.111,False
+Bounce Along,Back In Black,0.143,False
+LIKE I WANT YOU - Acoustic,Mood Swings (feat. Lil Tjay),0.333,False
+GREECE (feat. Drake),Voodoo Money,0.333,False
+LIKE I WANT YOU - Acoustic,Old Bone - Jim-E Stack Remix,0.1,False
+ONE OF US,No result,0.0,False
+THERE FOR YOU,THERE FOR YOU,0.375,True
+You'll Never Find Me,Let Me Love You,0.5,False
+Parasite Eve,Parasite Eve,0.4,True
+Bounce Along,Bounce Along,0.789,True

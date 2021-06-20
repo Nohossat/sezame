@@ -35,7 +35,7 @@ def recognize():
     fingerprints = fingerprint_song(new_file)
 
     # remove the file 
-    # os.remove(new_file)
+    os.remove(new_file)
   
     # get matched song
     song, confidence, most_similar_songs = match_song(fingerprints, confidence_threshold)

@@ -37,9 +37,9 @@ export default function ResultInfo({artists, song, sezame_nb, album_cover, spoti
         const nbArtists = artists.length;
         artist = artists.map((name, i) => {
             if (nbArtists == i + 1) {
-            return <span>{name}</span>
+            return <span key={i}>{name}</span>
             } else {
-            return <span>{name}, </span>
+            return <span key={i}>{name}, </span>
             }
         })
     }
@@ -61,7 +61,7 @@ export default function ResultInfo({artists, song, sezame_nb, album_cover, spoti
                     </h3>
                     <h1>{song}</h1>
                     <div className={styles.meta}>
-                        <p>{sezame_nb} Sezames </p>
+                        <p>{sezame_nb} {sezame_nb == 1 ? 'Sezame' : 'Sezames'}</p>
                         <a href={spotify_link}>Add to Spotify</a>
                     </div>
                 </div>

@@ -48,8 +48,8 @@ export default function ListenBtn(){
                         stopRecord(rec, gumStream);
                     }, 10000);
 
-                }).catch(function(err){
-                    console.log(err)
+                }).catch(function(err) {
+                    console.log(err);
                 });
             }
         
@@ -70,7 +70,7 @@ export default function ListenBtn(){
                 queue.push(nb_request);
 
                 let confidence_thres = 0.4;
-
+                console.log("confidence : ", result.confidence)
                 if (result.confidence >= confidence_thres || router.pathname == "/results" ) {
                     return true
                 }
@@ -97,11 +97,10 @@ export default function ListenBtn(){
 
                         storeResult({
                             confidence : result_api.confidence,
-                            song_name : result_api.matched_song["name"],
+                            name : result_api.matched_song["name"],
                             artists : result_api.matched_song["artists"],
-                            sezame_nb : 10,
-                            album_cover : result_api.matched_song["cover"],
-                            spotify_preview : result_api.matched_song["preview"],
+                            image : result_api.matched_song["cover"],
+                            preview : result_api.matched_song["preview"],
                             recommendations : result_api.similar_songs
                         })
 
@@ -119,7 +118,6 @@ export default function ListenBtn(){
                 e.preventDefault();
                 recording = true;
                 currentPathResult = false;
-                console.log(currentPathResult);
 
                 // we will send 3 seconds each time to the Flask APi to analyze the song when 
                 // it finds a match with a good confidence value, we display the result
@@ -142,7 +140,7 @@ export default function ListenBtn(){
 
             document.getElementById("listen_btn").addEventListener("click", recorder);
         }, 
-    []);
+    [result]);
 
     const variants = {
         stopListening : {

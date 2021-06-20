@@ -24,8 +24,8 @@ services:
             - sezame_net
     mongodb:
         image : 'mongo'
-        container_name: mongodb
-        hostname: mongodb
+        container_name: mongodb-sezame
+        hostname: mongodb-sezame
         environment: 
             - MONGO_INITDB_DATABASE=admin
             - MONGO_INITDB_ROOT_USERNAME=sezame-admin

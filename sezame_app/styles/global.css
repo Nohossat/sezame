@@ -25,6 +25,26 @@ a:hover {
     text-decoration: underline;
 }
 
+.findings_title {
+    font-size: 3em;
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.findings_container {
+    height: 100vh;
+}
+
+.findings_list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    width: 100%;
+    max-width: 100%;
+    grid-gap: 50px 20px;
+    justify-items: center;
+}
+
 .main-container {
     height: 100vh;
 }

@@ -4,7 +4,7 @@ import { faPlayCircle, faPause } from '@fortawesome/free-solid-svg-icons'
 import React, {useState, useEffect} from "react";
 import { motion } from "framer-motion";
 
-export default function RecommendItem({children}) {
+export default function RecommendItem({children, theme="black", sezame_find=null}) {
     const [isPlaying, setIsPlaying] = useState(false);
     const [audio, setAudio] = useState(0);
 
@@ -49,8 +49,14 @@ export default function RecommendItem({children}) {
         }
     })
 
+    let sezame_count;
+    
+    if (sezame_find) {
+    sezame_count = <p>{children.sezame_nb} {children.sezame_nb == 1 ? 'Sezame' : 'Sezames'}</p>
+    }
+
     return (
-    <div className="song_recommended">
+    <div className={styles.song_recommended}>
         <div className={styles.image_container}>
             <img className={styles.image} src={children.image} alt="cover"/>
             {children.preview != 0 &&
@@ -66,12 +72,12 @@ export default function RecommendItem({children}) {
                 </motion.span>
             }
         </div>
-        <div className={styles.recommendInfo}>
+        <div className={theme == "black" ? styles.recommendInfo : styles.recommendInfo_white}>
             <h3 className={styles.title}>{children.name}</h3>
             <h4 className={styles.artist}>{artists}</h4>
-            <h5 className={styles.genre}>{children.genre}</h5>
+            {children.genre && <h5 className={styles.genre}>{children.genre}</h5>}
+                {sezame_count}
         </div>
-        
     </div>
     )
 }

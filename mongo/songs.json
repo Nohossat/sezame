@@ -26,7 +26,7 @@
   "tempo": 102.976,
   "time_signature": 4,
   "valence": 0.78,
-  "nb_fingerprints": 9604
+  "nb_fingerprints": 6208
 },{
   "_id": {
     "$oid": "5f7d91439fcf6858e3cae157"
@@ -83,7 +83,7 @@
   "tempo": 124.009,
   "time_signature": 4,
   "valence": 0.827,
-  "nb_fingerprints": 12369
+  "nb_fingerprints": 10894
 },{
   "_id": {
     "$oid": "5f7d91439fcf6858e3cae159"
@@ -141,7 +141,7 @@
   "tempo": 99.889,
   "time_signature": 4,
   "valence": 0.695,
-  "nb_fingerprints": 9728
+  "nb_fingerprints": 6445
 },{
   "_id": {
     "$oid": "5f7d91439fcf6858e3cae15b"
@@ -227,7 +227,7 @@
   "tempo": 88.028,
   "time_signature": 4,
   "valence": 0.666,
-  "nb_fingerprints": 10872
+  "nb_fingerprints": 9512
 },{
   "_id": {
     "$oid": "5f7d91439fcf6858e3cae15e"
@@ -282,7 +282,7 @@
   "tempo": 104.022,
   "time_signature": 4,
   "valence": 0.93,
-  "nb_fingerprints": 10040
+  "nb_fingerprints": 6730
 },{
   "_id": {
     "$oid": "5f7d91439fcf6858e3cae160"
@@ -448,7 +448,7 @@
   "tempo": 128.385,
   "time_signature": 5,
   "valence": 0.516,
-  "nb_fingerprints": 8353
+  "nb_fingerprints": 5462
 },{
   "_id": {
     "$oid": "5f7d91439fcf6858e3cae166"
@@ -478,7 +478,7 @@
   "tempo": 100.012,
   "time_signature": 4,
   "valence": 0.717,
-  "nb_fingerprints": 8340
+  "nb_fingerprints": 7268
 },{
   "_id": {
     "$oid": "5f7d91439fcf6858e3cae167"
@@ -729,7 +729,7 @@
   "tempo": 113.038,
   "time_signature": 4,
   "valence": 0.678,
-  "nb_fingerprints": 11710
+  "nb_fingerprints": 10276
 },{
   "_id": {
     "$oid": "5f7d91439fcf6858e3cae170"
@@ -1735,7 +1735,7 @@
   "tempo": 104.181,
   "time_signature": 4,
   "valence": 0.556,
-  "nb_fingerprints": 10710
+  "nb_fingerprints": 9448
 },{
   "_id": {
     "$oid": "5f7d91449fcf6858e3cae195"
@@ -1763,7 +1763,7 @@
   "tempo": 129.856,
   "time_signature": 4,
   "valence": 0.434,
-  "nb_fingerprints": 10536
+  "nb_fingerprints": 9237
 },{
   "_id": {
     "$oid": "5f7d91449fcf6858e3cae196"
@@ -1791,7 +1791,7 @@
   "tempo": 95.39,
   "time_signature": 4,
   "valence": 0.557,
-  "nb_fingerprints": 8516
+  "nb_fingerprints": 7450
 },{
   "_id": {
     "$oid": "5f7d91449fcf6858e3cae197"
@@ -1819,7 +1819,7 @@
   "tempo": 139.898,
   "time_signature": 4,
   "valence": 0.132,
-  "nb_fingerprints": 9149
+  "nb_fingerprints": 5696
 },{
   "_id": {
     "$oid": "5f7d91449fcf6858e3cae198"
@@ -1847,7 +1847,7 @@
   "tempo": 122.053,
   "time_signature": 4,
   "valence": 0.627,
-  "nb_fingerprints": 11074
+  "nb_fingerprints": 9700
 },{
   "_id": {
     "$oid": "5f7d91449fcf6858e3cae199"
@@ -1876,7 +1876,7 @@
   "tempo": 112.05,
   "time_signature": 4,
   "valence": 0.33,
-  "nb_fingerprints": 10290
+  "nb_fingerprints": 8970
 },{
   "_id": {
     "$oid": "5f7d91449fcf6858e3cae19a"
@@ -1905,7 +1905,7 @@
   "tempo": 128.977,
   "time_signature": 4,
   "valence": 0.817,
-  "nb_fingerprints": 11446
+  "nb_fingerprints": 7499
 },{
   "_id": {
     "$oid": "5f7d91449fcf6858e3cae19b"
@@ -1934,7 +1934,7 @@
   "tempo": 90.989,
   "time_signature": 4,
   "valence": 0.756,
-  "nb_fingerprints": 8889
+  "nb_fingerprints": 5716
 },{
   "_id": {
     "$oid": "5f7d91449fcf6858e3cae19c"
@@ -1964,7 +1964,7 @@
   "tempo": 123.07,
   "time_signature": 4,
   "valence": 0.486,
-  "nb_fingerprints": 14626
+  "nb_fingerprints": 9279
 },{
   "_id": {
     "$oid": "5f7d91449fcf6858e3cae19d"
@@ -1992,7 +1992,7 @@
   "tempo": 113.012,
   "time_signature": 4,
   "valence": 0.467,
-  "nb_fingerprints": 9040
+  "nb_fingerprints": 7853
 },{
   "_id": {
     "$oid": "5f7d91449fcf6858e3cae19e"
@@ -2020,7 +2020,7 @@
   "tempo": 114.044,
   "time_signature": 4,
   "valence": 0.737,
-  "nb_fingerprints": 10559
+  "nb_fingerprints": 9188
 },{
   "_id": {
     "$oid": "5f7d91449fcf6858e3cae19f"
@@ -2075,7 +2075,7 @@
   "tempo": 98.074,
   "time_signature": 4,
   "valence": 0.54,
-  "nb_fingerprints": 7587
+  "nb_fingerprints": 6625
 },{
   "_id": {
     "$oid": "5f7d91449fcf6858e3cae1a1"
@@ -2103,7 +2103,7 @@
   "tempo": 171.017,
   "time_signature": 4,
   "valence": 0.345,
-  "nb_fingerprints": 10448
+  "nb_fingerprints": 9130
 },{
   "_id": {
     "$oid": "5f7d91449fcf6858e3cae1a2"
@@ -2160,7 +2160,7 @@
   "tempo": 159.989,
   "time_signature": 4,
   "valence": 0.904,
-  "nb_fingerprints": 10690
+  "nb_fingerprints": 9328
 },{
   "_id": {
     "$oid": "5f7d91449fcf6858e3cae1a4"
@@ -2357,7 +2357,7 @@
   "tempo": 144.026,
   "time_signature": 4,
   "valence": 0.348,
-  "nb_fingerprints": 8212
+  "nb_fingerprints": 4827
 },{
   "_id": {
     "$oid": "5f7d91449fcf6858e3cae1ab"
@@ -2385,7 +2385,7 @@
   "tempo": 112.985,
   "time_signature": 4,
   "valence": 0.753,
-  "nb_fingerprints": 9089
+  "nb_fingerprints": 7955
 },{
   "_id": {
     "$oid": "5f7d91449fcf6858e3cae1ac"
@@ -2528,7 +2528,7 @@
   "tempo": 168.169,
   "time_signature": 4,
   "valence": 0.393,
-  "nb_fingerprints": 8597
+  "nb_fingerprints": 7559
 },{
   "_id": {
     "$oid": "5f7d91449fcf6858e3cae1b1"
@@ -2556,7 +2556,7 @@
   "tempo": 110,
   "time_signature": 4,
   "valence": 0.259,
-  "nb_fingerprints": 9895
+  "nb_fingerprints": 6411
 },{
   "_id": {
     "$oid": "5f7d91449fcf6858e3cae1b2"
@@ -2640,7 +2640,7 @@
   "tempo": 110.075,
   "time_signature": 4,
   "valence": 0.807,
-  "nb_fingerprints": 8911
+  "nb_fingerprints": 7785
 },{
   "_id": {
     "$oid": "5f7d91449fcf6858e3cae1b5"
@@ -2668,7 +2668,7 @@
   "tempo": 102.078,
   "time_signature": 3,
   "valence": 0.27,
-  "nb_fingerprints": 9761
+  "nb_fingerprints": 8522
 },{
   "_id": {
     "$oid": "5f7d91449fcf6858e3cae1b6"
@@ -3167,7 +3167,7 @@
   "tempo": 86.919,
   "time_signature": 4,
   "valence": 0.372,
-  "nb_fingerprints": 8669
+  "nb_fingerprints": 7655
 },{
   "_id": {
     "$oid": "5f7d91449fcf6858e3cae1c8"
@@ -3751,7 +3751,7 @@
   "tempo": 130.013,
   "time_signature": 4,
   "valence": 0.351,
-  "nb_fingerprints": 10589
+  "nb_fingerprints": 9322
 },{
   "_id": {
     "$oid": "5f7d91449fcf6858e3cae1dd"
@@ -3834,7 +3834,7 @@
   "tempo": 123.056,
   "time_signature": 4,
   "valence": 0.646,
-  "nb_fingerprints": 10347
+  "nb_fingerprints": 8991
 },{
   "_id": {
     "$oid": "5f7d91449fcf6858e3cae1e0"
@@ -4615,7 +4615,7 @@
   "tempo": 168.022,
   "time_signature": 4,
   "valence": 0.906,
-  "nb_fingerprints": 11517
+  "nb_fingerprints": 10049
 },{
   "_id": {
     "$oid": "5f7d91449fcf6858e3cae1fe"
@@ -4644,7 +4644,7 @@
   "tempo": 96.988,
   "time_signature": 4,
   "valence": 0.698,
-  "nb_fingerprints": 10022
+  "nb_fingerprints": 6583
 },{
   "_id": {
     "$oid": "5f7d91449fcf6858e3cae1ff"
@@ -4703,7 +4703,7 @@
   "tempo": 91.985,
   "time_signature": 4,
   "valence": 0.346,
-  "nb_fingerprints": 8689
+  "nb_fingerprints": 7618
 },{
   "_id": {
     "$oid": "5f7d91449fcf6858e3cae201"
@@ -4733,7 +4733,7 @@
   "tempo": 90.013,
   "time_signature": 4,
   "valence": 0.68,
-  "nb_fingerprints": 9414
+  "nb_fingerprints": 8229
 },{
   "_id": {
     "$oid": "5f7d91449fcf6858e3cae202"
@@ -4761,7 +4761,7 @@
   "tempo": 175.896,
   "time_signature": 4,
   "valence": 0.396,
-  "nb_fingerprints": 8761
+  "nb_fingerprints": 7673
 },{
   "_id": {
     "$oid": "5f7d91449fcf6858e3cae203"
@@ -4793,7 +4793,7 @@
   "tempo": 176.007,
   "time_signature": 4,
   "valence": 0.786,
-  "nb_fingerprints": 8759
+  "nb_fingerprints": 5420
 },{
   "_id": {
     "$oid": "5f7d91449fcf6858e3cae204"
@@ -4878,7 +4878,7 @@
   "tempo": 168.084,
   "time_signature": 4,
   "valence": 0.698,
-  "nb_fingerprints": 11483
+  "nb_fingerprints": 5943
 },{
   "_id": {
     "$oid": "5f7d91449fcf6858e3cae207"
@@ -6178,7 +6178,7 @@
   "tempo": 130.978,
   "time_signature": 4,
   "valence": 0.645,
-  "nb_fingerprints": 8358
+  "nb_fingerprints": 5408
 },{
   "_id": {
     "$oid": "5f7d934a37d3e67dcca3237d"
@@ -6206,7 +6206,7 @@
   "tempo": 118.965,
   "time_signature": 4,
   "valence": 0.444,
-  "nb_fingerprints": 11171
+  "nb_fingerprints": 9800
 },{
   "_id": {
     "$oid": "5f7d934a37d3e67dcca3237e"
@@ -6234,7 +6234,7 @@
   "tempo": 128.977,
   "time_signature": 4,
   "valence": 0.83,
-  "nb_fingerprints": 8675
+  "nb_fingerprints": 7576
 },{
   "_id": {
     "$oid": "5f7d934a37d3e67dcca3237f"
@@ -6262,7 +6262,7 @@
   "tempo": 128.952,
   "time_signature": 4,
   "valence": 0.39,
-  "nb_fingerprints": 10604
+  "nb_fingerprints": 9305
 },{
   "_id": {
     "$oid": "5f7d934a37d3e67dcca32380"
@@ -6290,7 +6290,7 @@
   "tempo": 130.996,
   "time_signature": 4,
   "valence": 0.299,
-  "nb_fingerprints": 12236
+  "nb_fingerprints": 10767
 },{
   "_id": {
     "$oid": "5f7d934a37d3e67dcca32381"
@@ -6318,7 +6318,7 @@
   "tempo": 99.998,
   "time_signature": 4,
   "valence": 0.299,
-  "nb_fingerprints": 9427
+  "nb_fingerprints": 8317
 },{
   "_id": {
     "$oid": "5f7d934a37d3e67dcca32382"
@@ -6346,7 +6346,7 @@
   "tempo": 99.242,
   "time_signature": 3,
   "valence": 0.398,
-  "nb_fingerprints": 9018
+  "nb_fingerprints": 7834
 },{
   "_id": {
     "$oid": "5f7d934a37d3e67dcca32383"
@@ -6374,7 +6374,7 @@
   "tempo": 139.949,
   "time_signature": 4,
   "valence": 0.367,
-  "nb_fingerprints": 12826
+  "nb_fingerprints": 7933
 },{
   "_id": {
     "$oid": "5f7d934a37d3e67dcca32384"
@@ -6402,7 +6402,7 @@
   "tempo": 120.025,
   "time_signature": 4,
   "valence": 0.877,
-  "nb_fingerprints": 12019
+  "nb_fingerprints": 7937
 },{
   "_id": {
     "$oid": "5f7d934a37d3e67dcca32385"
@@ -7548,7 +7548,7 @@
   "tempo": 102.489,
   "time_signature": 4,
   "valence": 0.232,
-  "nb_fingerprints": 9904
+  "nb_fingerprints": 6127
 },{
   "_id": {
     "$oid": "5f7d934a37d3e67dcca323b0"
@@ -7576,7 +7576,7 @@
   "tempo": 183.985,
   "time_signature": 4,
   "valence": 0.167,
-  "nb_fingerprints": 8611
+  "nb_fingerprints": 7531
 },{
   "_id": {
     "$oid": "5f7d934a37d3e67dcca323b1"
@@ -7604,7 +7604,7 @@
   "tempo": 131.99,
   "time_signature": 4,
   "valence": 0.101,
-  "nb_fingerprints": 10045
+  "nb_fingerprints": 8807
 },{
   "_id": {
     "$oid": "5f7d934a37d3e67dcca323b2"
@@ -7632,7 +7632,7 @@
   "tempo": 90.999,
   "time_signature": 4,
   "valence": 0.45,
-  "nb_fingerprints": 8449
+  "nb_fingerprints": 7369
 },{
   "_id": {
     "$oid": "5f7d934a37d3e67dcca323b3"
@@ -7714,7 +7714,7 @@
   "tempo": 107.028,
   "time_signature": 4,
   "valence": 0.177,
-  "nb_fingerprints": 10846
+  "nb_fingerprints": 9536
 },{
   "_id": {
     "$oid": "5f7d934a37d3e67dcca323b6"
@@ -7770,7 +7770,7 @@
   "tempo": 92.358,
   "time_signature": 4,
   "valence": 0.495,
-  "nb_fingerprints": 8329
+  "nb_fingerprints": 7270
 },{
   "_id": {
     "$oid": "5f7d934a37d3e67dcca323b8"
@@ -7798,7 +7798,7 @@
   "tempo": 104.007,
   "time_signature": 4,
   "valence": 0.547,
-  "nb_fingerprints": 10795
+  "nb_fingerprints": 9465
 },{
   "_id": {
     "$oid": "5f7d934a37d3e67dcca323b9"
@@ -7826,7 +7826,7 @@
   "tempo": 135.128,
   "time_signature": 4,
   "valence": 0.545,
-  "nb_fingerprints": 9809
+  "nb_fingerprints": 8586
 },{
   "_id": {
     "$oid": "5f7d934a37d3e67dcca323ba"
@@ -7854,7 +7854,7 @@
   "tempo": 100.031,
   "time_signature": 4,
   "valence": 0.346,
-  "nb_fingerprints": 8898
+  "nb_fingerprints": 7779
 },{
   "_id": {
     "$oid": "5f7d934a37d3e67dcca323bb"
@@ -7882,7 +7882,7 @@
   "tempo": 129.842,
   "time_signature": 4,
   "valence": 0.496,
-  "nb_fingerprints": 10051
+  "nb_fingerprints": 8731
 },{
   "_id": {
     "$oid": "5f7d934a37d3e67dcca323bc"
@@ -9756,7 +9756,7 @@
   "tempo": 188.386,
   "time_signature": 4,
   "valence": 0.763,
-  "nb_fingerprints": 8805
+  "nb_fingerprints": 5766
 },{
   "_id": {
     "$oid": "5f7d934a37d3e67dcca32403"
@@ -9865,7 +9865,7 @@
   "tempo": 113.375,
   "time_signature": 4,
   "valence": 0.816,
-  "nb_fingerprints": 13887
+  "nb_fingerprints": 12099
 },{
   "_id": {
     "$oid": "5f7d934a37d3e67dcca32407"
@@ -9893,7 +9893,7 @@
   "tempo": 117.292,
   "time_signature": 4,
   "valence": 0.15,
-  "nb_fingerprints": 7498
+  "nb_fingerprints": 6554
 },{
   "_id": {
     "$oid": "5f7d934a37d3e67dcca32408"
@@ -9921,7 +9921,7 @@
   "tempo": 99.437,
   "time_signature": 4,
   "valence": 0.491,
-  "nb_fingerprints": 12036
+  "nb_fingerprints": 10484
 },{
   "_id": {
     "$oid": "5f7d934a37d3e67dcca32409"
@@ -12356,7 +12356,7 @@
   "tempo": 133.939,
   "time_signature": 4,
   "valence": 0.455,
-  "nb_fingerprints": 7725
+  "nb_fingerprints": 6724
 },{
   "_id": {
     "$oid": "5f7d934a37d3e67dcca32466"
@@ -12385,7 +12385,7 @@
   "tempo": 89.977,
   "time_signature": 4,
   "valence": 0.497,
-  "nb_fingerprints": 8856
+  "nb_fingerprints": 7694
 },{
   "_id": {
     "$oid": "5f7d934a37d3e67dcca32467"
@@ -12414,7 +12414,7 @@
   "tempo": 163.071,
   "time_signature": 4,
   "valence": 0.45,
-  "nb_fingerprints": 9843
+  "nb_fingerprints": 8633
 },{
   "_id": {
     "$oid": "5f7d934a37d3e67dcca32468"
@@ -12444,7 +12444,7 @@
   "tempo": 125.971,
   "time_signature": 4,
   "valence": 0.347,
-  "nb_fingerprints": 8899
+  "nb_fingerprints": 7761
 },{
   "_id": {
     "$oid": "5f7d934a37d3e67dcca32469"
@@ -12473,7 +12473,7 @@
   "tempo": 160.048,
   "time_signature": 4,
   "valence": 0.325,
-  "nb_fingerprints": 11254
+  "nb_fingerprints": 9873
 },{
   "_id": {
     "$oid": "5f7d934a37d3e67dcca3246a"
@@ -12504,7 +12504,7 @@
   "tempo": 140.04,
   "time_signature": 4,
   "valence": 0.471,
-  "nb_fingerprints": 10848
+  "nb_fingerprints": 9514
 },{
   "_id": {
     "$oid": "5f7d934a37d3e67dcca3246b"
@@ -12533,7 +12533,7 @@
   "tempo": 85.84,
   "time_signature": 4,
   "valence": 0.229,
-  "nb_fingerprints": 9728
+  "nb_fingerprints": 8544
 },{
   "_id": {
     "$oid": "5f7d934a37d3e67dcca3246c"
@@ -12592,7 +12592,7 @@
   "tempo": 145.013,
   "time_signature": 4,
   "valence": 0.835,
-  "nb_fingerprints": 9880
+  "nb_fingerprints": 8662
 },{
   "_id": {
     "$oid": "5f7d934a37d3e67dcca3246f"
@@ -12620,7 +12620,7 @@
   "tempo": 81.618,
   "time_signature": 4,
   "valence": 0.837,
-  "nb_fingerprints": 10740
+  "nb_fingerprints": 6061
 },{
   "_id": {
     "$oid": "5f7d934a37d3e67dcca32470"
@@ -12649,7 +12649,7 @@
   "tempo": 140.022,
   "time_signature": 4,
   "valence": 0.775,
-  "nb_fingerprints": 11091
+  "nb_fingerprints": 9752
 },{
   "_id": {
     "$oid": "5f7d934a37d3e67dcca32471"
@@ -12733,7 +12733,7 @@
   "tempo": 143.01,
   "time_signature": 4,
   "valence": 0.415,
-  "nb_fingerprints": 8669
+  "nb_fingerprints": 7618
 },{
   "_id": {
     "$oid": "5f7d934a37d3e67dcca32474"
@@ -12818,7 +12818,7 @@
   "tempo": 133.073,
   "time_signature": 4,
   "valence": 0.357,
-  "nb_fingerprints": 9492
+  "nb_fingerprints": 5850
 },{
   "_id": {
     "$oid": "5f7d934a37d3e67dcca32477"
@@ -13011,7 +13011,7 @@
   "tempo": 94.148,
   "time_signature": 4,
   "valence": 0.581,
-  "nb_fingerprints": 8598
+  "nb_fingerprints": 5525
 },{
   "_id": {
     "$oid": "5f7d934a37d3e67dcca3247e"
@@ -13096,7 +13096,7 @@
   "tempo": 179.798,
   "time_signature": 4,
   "valence": 0.269,
-  "nb_fingerprints": 8470
+  "nb_fingerprints": 5190
 },{
   "_id": {
     "$oid": "5f7d934a37d3e67dcca32481"
@@ -13596,7 +13596,7 @@
   "tempo": 144.991,
   "time_signature": 4,
   "valence": 0.535,
-  "nb_fingerprints": 12876
+  "nb_fingerprints": 11314
 },{
   "_id": {
     "$oid": "5f7d934a37d3e67dcca32493"
@@ -13733,7 +13733,7 @@
   "tempo": 125.004,
   "time_signature": 4,
   "valence": 0.733,
-  "nb_fingerprints": 12784
+  "nb_fingerprints": 8509
 },{
   "_id": {
     "$oid": "5f7d934a37d3e67dcca32499"
@@ -13762,7 +13762,7 @@
   "tempo": 126.998,
   "time_signature": 4,
   "valence": 0.304,
-  "nb_fingerprints": 11737
+  "nb_fingerprints": 7507
 },{
   "_id": {
     "$oid": "5f7d934a37d3e67dcca3249a"
@@ -13819,7 +13819,7 @@
   "tempo": 126.974,
   "time_signature": 4,
   "valence": 0.575,
-  "nb_fingerprints": 12854
+  "nb_fingerprints": 11234
 },{
   "_id": {
     "$oid": "5f7d934a37d3e67dcca3249c"
@@ -13847,7 +13847,7 @@
   "tempo": 127.014,
   "time_signature": 4,
   "valence": 0.123,
-  "nb_fingerprints": 17338
+  "nb_fingerprints": 11680
 },{
   "_id": {
     "$oid": "5f7d934a37d3e67dcca3249d"
@@ -13875,7 +13875,7 @@
   "tempo": 127.957,
   "time_signature": 4,
   "valence": 0.127,
-  "nb_fingerprints": 13349
+  "nb_fingerprints": 11674
 },{
   "_id": {
     "$oid": "5f7d934a37d3e67dcca3249e"
@@ -13906,7 +13906,7 @@
   "tempo": 123.986,
   "time_signature": 4,
   "valence": 0.827,
-  "nb_fingerprints": 10872
+  "nb_fingerprints": 9458
 },{
   "_id": {
     "$oid": "5f7d934a37d3e67dcca3249f"
@@ -13934,7 +13934,7 @@
   "tempo": 121.979,
   "time_signature": 4,
   "valence": 0.894,
-  "nb_fingerprints": 10666
+  "nb_fingerprints": 7408
 },{
   "_id": {
     "$oid": "5f7d934a37d3e67dcca324a0"
@@ -13990,7 +13990,7 @@
   "tempo": 125.004,
   "time_signature": 4,
   "valence": 0.692,
-  "nb_fingerprints": 14955
+  "nb_fingerprints": 13044
 },{
   "_id": {
     "$oid": "5f7d934a37d3e67dcca324a2"
@@ -16507,7 +16507,7 @@
   "tempo": 130.003,
   "time_signature": 4,
   "valence": 0.183,
-  "nb_fingerprints": 19184
+  "nb_fingerprints": 16824
 },{
   "_id": {
     "$oid": "5f7d934b37d3e67dcca324fe"
@@ -16535,7 +16535,7 @@
   "tempo": 131.013,
   "time_signature": 4,
   "valence": 0.0391,
-  "nb_fingerprints": 17967
+  "nb_fingerprints": 15675
 },{
   "_id": {
     "$oid": "5f7d934b37d3e67dcca324ff"
@@ -16591,7 +16591,7 @@
   "tempo": 132.991,
   "time_signature": 4,
   "valence": 0.157,
-  "nb_fingerprints": 13112
+  "nb_fingerprints": 11513
 },{
   "_id": {
     "$oid": "5f7d934b37d3e67dcca32501"
@@ -16619,7 +16619,7 @@
   "tempo": 130.002,
   "time_signature": 4,
   "valence": 0.195,
-  "nb_fingerprints": 22536
+  "nb_fingerprints": 15497
 },{
   "_id": {
     "$oid": "5f7d934b37d3e67dcca32502"
@@ -16647,7 +16647,7 @@
   "tempo": 130.007,
   "time_signature": 4,
   "valence": 0.257,
-  "nb_fingerprints": 17993
+  "nb_fingerprints": 12320
 },{
   "_id": {
     "$oid": "5f7d934b37d3e67dcca32503"
@@ -16702,7 +16702,7 @@
   "tempo": 127.976,
   "time_signature": 3,
   "valence": 0.557,
-  "nb_fingerprints": 10943
+  "nb_fingerprints": 9561
 },{
   "_id": {
     "$oid": "5f7d934b37d3e67dcca32505"
@@ -16730,7 +16730,7 @@
   "tempo": 127.998,
   "time_signature": 4,
   "valence": 0.201,
-  "nb_fingerprints": 13775
+  "nb_fingerprints": 9433
 },{
   "_id": {
     "$oid": "5f7d934b37d3e67dcca32506"
@@ -18180,7 +18180,7 @@
   "tempo": 163.845,
   "time_signature": 4,
   "valence": 0.601,
-  "nb_fingerprints": 10572
+  "nb_fingerprints": 9278
 },{
   "_id": {
     "$oid": "5f7d934b37d3e67dcca32579"
@@ -18208,7 +18208,7 @@
   "tempo": 160.061,
   "time_signature": 4,
   "valence": 0.382,
-  "nb_fingerprints": 9969
+  "nb_fingerprints": 5395
 },{
   "_id": {
     "$oid": "5f7d934b37d3e67dcca3257a"
@@ -18236,7 +18236,7 @@
   "tempo": 107.952,
   "time_signature": 4,
   "valence": 0.653,
-  "nb_fingerprints": 11432
+  "nb_fingerprints": 10034
 },{
   "_id": {
     "$oid": "5f7d934b37d3e67dcca3257b"
@@ -18264,7 +18264,7 @@
   "tempo": 130.024,
   "time_signature": 4,
   "valence": 0.411,
-  "nb_fingerprints": 10291
+  "nb_fingerprints": 8979
 },{
   "_id": {
     "$oid": "5f7d934b37d3e67dcca3257c"
@@ -19464,7 +19464,7 @@
   "tempo": 80.476,
   "time_signature": 4,
   "valence": 0.346,
-  "nb_fingerprints": 11850
+  "nb_fingerprints": 10369
 },{
   "_id": {
     "$oid": "5f7d934b37d3e67dcca325ac"
@@ -19492,7 +19492,7 @@
   "tempo": 80.02,
   "time_signature": 4,
   "valence": 0.668,
-  "nb_fingerprints": 11948
+  "nb_fingerprints": 10488
 },{
   "_id": {
     "$oid": "5f7d934b37d3e67dcca325ad"
@@ -19520,7 +19520,7 @@
   "tempo": 88.011,
   "time_signature": 4,
   "valence": 0.8,
-  "nb_fingerprints": 11522
+  "nb_fingerprints": 9994
 },{
   "_id": {
     "$oid": "5f7d934b37d3e67dcca325ae"
@@ -19548,7 +19548,7 @@
   "tempo": 164.791,
   "time_signature": 4,
   "valence": 0.541,
-  "nb_fingerprints": 8063
+  "nb_fingerprints": 7073
 },{
   "_id": {
     "$oid": "5f7d934b37d3e67dcca325b0"
@@ -19603,7 +19603,7 @@
   "tempo": 166.836,
   "time_signature": 4,
   "valence": 0.567,
-  "nb_fingerprints": 15241
+  "nb_fingerprints": 13335
 },{
   "_id": {
     "$oid": "5f7d934b37d3e67dcca325b2"
@@ -19631,7 +19631,7 @@
   "tempo": 96.771,
   "time_signature": 4,
   "valence": 0.255,
-  "nb_fingerprints": 8451
+  "nb_fingerprints": 5522
 },{
   "_id": {
     "$oid": "5f7d934b37d3e67dcca325b3"
@@ -20766,7 +20766,7 @@
   "tempo": 133.698,
   "time_signature": 3,
   "valence": 0.454,
-  "nb_fingerprints": 14483
+  "nb_fingerprints": 12707
 },{
   "_id": {
     "$oid": "5f7d934b37d3e67dcca325df"
@@ -20794,7 +20794,7 @@
   "tempo": 81.899,
   "time_signature": 4,
   "valence": 0.132,
-  "nb_fingerprints": 11134
+  "nb_fingerprints": 9692
 },{
   "_id": {
     "$oid": "5f7d934b37d3e67dcca325e0"
@@ -20822,7 +20822,7 @@
   "tempo": 128.315,
   "time_signature": 4,
   "valence": 0.109,
-  "nb_fingerprints": 2395
+  "nb_fingerprints": 1513
 },{
   "_id": {
     "$oid": "5f7d934b37d3e67dcca325e1"
@@ -21148,7 +21148,7 @@
   "tempo": 112.668,
   "time_signature": 4,
   "valence": 0.127,
-  "nb_fingerprints": 16549
+  "nb_fingerprints": 14469
 },{
   "_id": {
     "$oid": "5f7d934b37d3e67dcca325ed"
@@ -21230,7 +21230,7 @@
   "tempo": 102.778,
   "time_signature": 4,
   "valence": 0.291,
-  "nb_fingerprints": 11026
+  "nb_fingerprints": 6759
 },{
   "_id": {
     "$oid": "5f7d934b37d3e67dcca325f0"
@@ -22678,7 +22678,7 @@
   "tempo": 74.554,
   "time_signature": 4,
   "valence": 0.0384,
-  "nb_fingerprints": 8342
+  "nb_fingerprints": 5218
 },{
   "_id": {
     "$oid": "5f7d934c37d3e67dcca32627"
@@ -22826,7 +22826,7 @@
   "tempo": 74.568,
   "time_signature": 4,
   "valence": 0.115,
-  "nb_fingerprints": 5322
+  "nb_fingerprints": 4660
 },{
   "_id": {
     "$oid": "5f7d934c37d3e67dcca3262c"
@@ -25593,7 +25593,7 @@
   "tempo": 86.747,
   "time_signature": 4,
   "valence": 0.759,
-  "nb_fingerprints": 9565
+  "nb_fingerprints": 8394
 },{
   "_id": {
     "$oid": "5f7d934c37d3e67dcca3268c"
@@ -25621,7 +25621,7 @@
   "tempo": 80.962,
   "time_signature": 4,
   "valence": 0.653,
-  "nb_fingerprints": 14042
+  "nb_fingerprints": 4994
 },{
   "_id": {
     "$oid": "5f7d934c37d3e67dcca3268d"
@@ -25649,7 +25649,7 @@
   "tempo": 165.998,
   "time_signature": 4,
   "valence": 0.709,
-  "nb_fingerprints": 9926
+  "nb_fingerprints": 8727
 },{
   "_id": {
     "$oid": "5f7d934c37d3e67dcca3268e"
@@ -25677,7 +25677,7 @@
   "tempo": 91.99,
   "time_signature": 4,
   "valence": 0.908,
-  "nb_fingerprints": 10406
+  "nb_fingerprints": 6672
 },{
   "_id": {
     "$oid": "5f7d934c37d3e67dcca3268f"
@@ -25705,7 +25705,7 @@
   "tempo": 187.807,
   "time_signature": 4,
   "valence": 0.738,
-  "nb_fingerprints": 9815
+  "nb_fingerprints": 8598
 },{
   "_id": {
     "$oid": "5f7d934c37d3e67dcca32690"
@@ -25815,7 +25815,7 @@
   "tempo": 95.103,
   "time_signature": 4,
   "valence": 0.947,
-  "nb_fingerprints": 9200
+  "nb_fingerprints": 8082
 },{
   "_id": {
     "$oid": "5f7d934c37d3e67dcca32694"
@@ -25843,7 +25843,7 @@
   "tempo": 106.84,
   "time_signature": 4,
   "valence": 0.568,
-  "nb_fingerprints": 10229
+  "nb_fingerprints": 8906
 },{
   "_id": {
     "$oid": "5f7d934c37d3e67dcca32695"
@@ -26033,7 +26033,7 @@
   "tempo": 95.699,
   "time_signature": 4,
   "valence": 0.964,
-  "nb_fingerprints": 12493
+  "nb_fingerprints": 8488
 },{
   "_id": {
     "$oid": "5f7d934c37d3e67dcca3269e"
@@ -27707,7 +27707,7 @@
   "tempo": 148.964,
   "time_signature": 4,
   "valence": 0.985,
-  "nb_fingerprints": 9474
+  "nb_fingerprints": 8247
 },{
   "_id": {
     "$oid": "5f7d934c37d3e67dcca3272d"
@@ -27735,7 +27735,7 @@
   "tempo": 81.125,
   "time_signature": 4,
   "valence": 0.49,
-  "nb_fingerprints": 12197
+  "nb_fingerprints": 10617
 },{
   "_id": {
     "$oid": "5f7d934c37d3e67dcca32730"
@@ -27763,7 +27763,7 @@
   "tempo": 150.439,
   "time_signature": 4,
   "valence": 0.905,
-  "nb_fingerprints": 9019
+  "nb_fingerprints": 5038
 },{
   "_id": {
     "$oid": "5f7d934c37d3e67dcca32731"
@@ -27818,7 +27818,7 @@
   "tempo": 100.065,
   "time_signature": 4,
   "valence": 0.834,
-  "nb_fingerprints": 7684
+  "nb_fingerprints": 5295
 },{
   "_id": {
     "$oid": "5f7d934c37d3e67dcca32733"
@@ -27846,7 +27846,7 @@
   "tempo": 108.502,
   "time_signature": 4,
   "valence": 0.709,
-  "nb_fingerprints": 6971
+  "nb_fingerprints": 6064
 },{
   "_id": {
     "$oid": "5f7d934c37d3e67dcca32734"
@@ -28091,7 +28091,7 @@
   "tempo": 132.145,
   "time_signature": 4,
   "valence": 0.961,
-  "nb_fingerprints": 9589
+  "nb_fingerprints": 8320
 },{
   "_id": {
     "$oid": "5f7d934c37d3e67dcca3273d"
@@ -28119,7 +28119,7 @@
   "tempo": 112.852,
   "time_signature": 4,
   "valence": 0.844,
-  "nb_fingerprints": 6860
+  "nb_fingerprints": 6009
 },{
   "_id": {
     "$oid": "5f7d934c37d3e67dcca3273e"
@@ -29263,7 +29263,7 @@
   "tempo": 97.969,
   "time_signature": 4,
   "valence": 0.971,
-  "nb_fingerprints": 8418
+  "nb_fingerprints": 7359
 },{
   "_id": {
     "$oid": "5f7d93c44d60105beb49007f"
@@ -29291,7 +29291,7 @@
   "tempo": 102.141,
   "time_signature": 4,
   "valence": 0.76,
-  "nb_fingerprints": 9120
+  "nb_fingerprints": 7989
 },{
   "_id": {
     "$oid": "5f7d93c44d60105beb490080"
@@ -29428,7 +29428,7 @@
   "tempo": 116.844,
   "time_signature": 4,
   "valence": 0.974,
-  "nb_fingerprints": 11817
+  "nb_fingerprints": 6886
 },{
   "_id": {
     "$oid": "5f7d93c44d60105beb490085"
@@ -31998,7 +31998,7 @@
   "tempo": 117.762,
   "time_signature": 3,
   "valence": 0.256,
-  "nb_fingerprints": 9123
+  "nb_fingerprints": 8019
 },{
   "_id": {
     "$oid": "5f7d93c54d60105beb4900e4"
@@ -32108,7 +32108,7 @@
   "tempo": 139.868,
   "time_signature": 4,
   "valence": 0.46,
-  "nb_fingerprints": 7541
+  "nb_fingerprints": 4711
 },{
   "_id": {
     "$oid": "5f7d93c54d60105beb4900e8"
@@ -32192,7 +32192,7 @@
   "tempo": 136.077,
   "time_signature": 4,
   "valence": 0.354,
-  "nb_fingerprints": 8778
+  "nb_fingerprints": 7703
 },{
   "_id": {
     "$oid": "5f7d93c54d60105beb4900eb"
@@ -32247,7 +32247,7 @@
   "tempo": 76.062,
   "time_signature": 4,
   "valence": 0.576,
-  "nb_fingerprints": 8653
+  "nb_fingerprints": 5242
 },{
   "_id": {
     "$oid": "5f7d93c54d60105beb4900ed"
@@ -33376,7 +33376,7 @@
   "tempo": 143.942,
   "time_signature": 4,
   "valence": 0.163,
-  "nb_fingerprints": 9819
+  "nb_fingerprints": 6029
 },{
   "_id": {
     "$oid": "5f7d93c54d60105beb490117"
@@ -33492,7 +33492,7 @@
   "tempo": 163.888,
   "time_signature": 4,
   "valence": 0.248,
-  "nb_fingerprints": 10017
+  "nb_fingerprints": 5575
 },{
   "_id": {
     "$oid": "5f7d93c54d60105beb49011b"
@@ -33521,7 +33521,7 @@
   "tempo": 144.067,
   "time_signature": 4,
   "valence": 0.379,
-  "nb_fingerprints": 9631
+  "nb_fingerprints": 8415
 },{
   "_id": {
     "$oid": "5f7d93c54d60105beb49011c"
@@ -33550,7 +33550,7 @@
   "tempo": 135.971,
   "time_signature": 4,
   "valence": 0.428,
-  "nb_fingerprints": 10422
+  "nb_fingerprints": 6789
 },{
   "_id": {
     "$oid": "5f7d93c54d60105beb49011d"
@@ -33578,7 +33578,7 @@
   "tempo": 84.912,
   "time_signature": 4,
   "valence": 0.353,
-  "nb_fingerprints": 9253
+  "nb_fingerprints": 8129
 },{
   "_id": {
     "$oid": "5f7d93c54d60105beb49011e"
@@ -36133,7 +36133,7 @@
   "tempo": 93.002,
   "time_signature": 4,
   "valence": 0.501,
-  "nb_fingerprints": 8343
+  "nb_fingerprints": 5576
 },{
   "_id": {
     "$oid": "5f7d93c54d60105beb49017d"
@@ -36161,7 +36161,7 @@
   "tempo": 89.927,
   "time_signature": 4,
   "valence": 0.432,
-  "nb_fingerprints": 7718
+  "nb_fingerprints": 6747
 },{
   "_id": {
     "$oid": "5f7d93c54d60105beb49017e"
@@ -36190,7 +36190,7 @@
   "tempo": 158.985,
   "time_signature": 4,
   "valence": 0.126,
-  "nb_fingerprints": 5411
+  "nb_fingerprints": 3343
 },{
   "_id": {
     "$oid": "5f7d93c54d60105beb490180"
@@ -36245,7 +36245,7 @@
   "tempo": 98.027,
   "time_signature": 4,
   "valence": 0.227,
-  "nb_fingerprints": 7826
+  "nb_fingerprints": 6792
 },{
   "_id": {
     "$oid": "5f7d93c54d60105beb490182"
@@ -36273,7 +36273,7 @@
   "tempo": 124.548,
   "time_signature": 4,
   "valence": 0.124,
-  "nb_fingerprints": 6820
+  "nb_fingerprints": 5935
 },{
   "_id": {
     "$oid": "5f7d93c54d60105beb490183"
@@ -36358,7 +36358,7 @@
   "tempo": 122.229,
   "time_signature": 4,
   "valence": 0.143,
-  "nb_fingerprints": 12320
+  "nb_fingerprints": 8186
 },{
   "_id": {
     "$oid": "5f7d93c54d60105beb490186"
@@ -37965,7 +37965,7 @@
   "tempo": 94.514,
   "duration_ms": 256733,
   "time_signature": 4,
-  "nb_fingerprints": 7903
+  "nb_fingerprints": 5058
 },{
   "_id": {
     "$oid": "5f8462f0bb2ccbae114f8f02"
